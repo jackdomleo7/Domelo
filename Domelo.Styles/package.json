@@ -1,0 +1,25 @@
+{
+  "name": "domelo-styles",
+  "version": "1.0.0",
+  "description": "Styles for the Domelo design system",
+  "main": "index.js",
+  "scripts": {
+    "stylelint": "stylelint \"**/*.scss\"",
+    "stylelint:fix": "stylelint \"**/*.scss\" --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JDomleo/Domelo.git"
+  },
+  "author": "Jack Domleo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JDomleo/Domelo/issues"
+  },
+  "homepage": "https://github.com/JDomleo/Domelo#readme",
+  "devDependencies": {
+    "stylelint": "^13.0.0",
+    "stylelint-order": "^4.0.0",
+    "stylelint-scss": "^3.14.0"
+  }
+}
