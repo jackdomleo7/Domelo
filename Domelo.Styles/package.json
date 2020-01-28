@@ -2,7 +2,6 @@
   "name": "domelo-styles",
   "version": "1.0.0",
   "description": "Styles for the Domelo design system",
-  "main": "index.js",
   "scripts": {
     "stylelint": "stylelint \"**/*.scss\"",
     "stylelint:fix": "stylelint \"**/*.scss\" --fix"
