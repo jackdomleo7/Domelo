@@ -21,6 +21,15 @@ html {
 
 body {
   background-color: rgba(var(--grey-50), 1);
+  color: rgba(var(--text-content-medium-color), 1);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: rgba(var(--text-content-high-color), 1);
 }
 
