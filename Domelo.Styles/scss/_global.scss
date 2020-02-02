@@ -1,10 +1,12 @@
 :root {
-  --base-background-color: var(--grey-200);
   --text-content-high-color: var(--grey-900);
   --text-content-medium-color: var(--grey-800);
   --text-content-low-color: var(--grey-700);
   --placeholder-text-color: var(--grey-600);
   --disabled-text-color: var(--grey-500);
+  --base-background-color: var(--grey-100);
+  --alternate-background-high-color: var(--grey-75);
+  --alternate-background-low-color: var(--grey-50);
 }
 
 html {
@@ -18,7 +20,7 @@ html {
 }
 
 body {
-  background-color: rgba(var(--base-background-color), 1);
+  background-color: rgba(var(--grey-50), 1);
   color: rgba(var(--text-content-high-color), 1);
 }
 
