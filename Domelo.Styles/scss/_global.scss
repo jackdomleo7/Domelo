@@ -1,0 +1,27 @@
+:root {
+  --base-background-color: var(--grey-200);
+  --text-content-high-color: var(--grey-900);
+  --text-content-medium-color: var(--grey-800);
+  --text-content-low-color: var(--grey-700);
+  --placeholder-text-color: var(--grey-600);
+  --disabled-text-color: var(--grey-500);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: rgba(var(--base-background-color), 1);
+  color: rgba(var(--text-content-high-color), 1);
+}
+
+img {
+  user-select: none;
+}
