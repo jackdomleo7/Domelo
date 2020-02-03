@@ -35,20 +35,20 @@ $font-size-1300: pxToRem(70px);
   --font-size-1300: #{$font-size-1300};
 
   @media (min-width: $scale-desktop-min-width) {
-    --font-size-50: #{$font-size-50 / $scale-desktop-proportion};
-    --font-size-75: #{$font-size-75 / $scale-desktop-proportion};
-    --font-size-100: #{$font-size-100 / $scale-desktop-proportion};
-    --font-size-200: #{$font-size-200 / $scale-desktop-proportion};
-    --font-size-300: #{$font-size-300 / $scale-desktop-proportion};
-    --font-size-400: #{$font-size-400 / $scale-desktop-proportion};
-    --font-size-500: #{$font-size-500 / $scale-desktop-proportion};
-    --font-size-600: #{$font-size-600 / $scale-desktop-proportion};
-    --font-size-700: #{$font-size-700 / $scale-desktop-proportion};
-    --font-size-800: #{$font-size-800 / $scale-desktop-proportion};
-    --font-size-900: #{$font-size-900 / $scale-desktop-proportion};
-    --font-size-1000: #{$font-size-1000 / $scale-desktop-proportion};
-    --font-size-1100: #{$font-size-1100 / $scale-desktop-proportion};
-    --font-size-1200: #{$font-size-1200 / $scale-desktop-proportion};
-    --font-size-1300: #{$font-size-1300 / $scale-desktop-proportion};
+    --font-size-50: calc(#{$font-size-50 / $scale-desktop-proportion});
+    --font-size-75: calc(#{$font-size-75 / $scale-desktop-proportion});
+    --font-size-100: calc(#{$font-size-100 / $scale-desktop-proportion});
+    --font-size-200: calc(#{$font-size-200 / $scale-desktop-proportion});
+    --font-size-300: calc(#{$font-size-300 / $scale-desktop-proportion});
+    --font-size-400: calc(#{$font-size-400 / $scale-desktop-proportion});
+    --font-size-500: calc(#{$font-size-500 / $scale-desktop-proportion});
+    --font-size-600: calc(#{$font-size-600 / $scale-desktop-proportion});
+    --font-size-700: calc(#{$font-size-700 / $scale-desktop-proportion});
+    --font-size-800: calc(#{$font-size-800 / $scale-desktop-proportion});
+    --font-size-900: calc(#{$font-size-900 / $scale-desktop-proportion});
+    --font-size-1000: calc(#{$font-size-1000 / $scale-desktop-proportion});
+    --font-size-1100: calc(#{$font-size-1100 / $scale-desktop-proportion});
+    --font-size-1200: calc(#{$font-size-1200 / $scale-desktop-proportion});
+    --font-size-1300: calc(#{$font-size-1300 / $scale-desktop-proportion});
   }
 }
