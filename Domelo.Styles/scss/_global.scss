@@ -11,6 +11,7 @@
 
 html {
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 *,
@@ -22,6 +23,7 @@ html {
 body {
   background-color: rgba(var(--grey-50), 1);
   color: rgba(var(--text-content-medium-color), 1);
+  font-family: "Open Sans", Verdana, Arial, sans-serif;
 }
 
 h1,
