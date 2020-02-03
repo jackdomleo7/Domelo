@@ -1,20 +1,21 @@
 @import "../scale/scale";
+@import "../functions";
 
-$font-size-50: 13px;
-$font-size-75: 15px;
-$font-size-100: 17px;
-$font-size-200: 19px;
-$font-size-300: 22px;
-$font-size-400: 24px;
-$font-size-500: 27px;
-$font-size-600: 31px;
-$font-size-700: 34px;
-$font-size-800: 39px;
-$font-size-900: 44px;
-$font-size-1000: 49px;
-$font-size-1100: 55px;
-$font-size-1200: 62px;
-$font-size-1300: 70px;
+$font-size-50: pxToRem(13px);
+$font-size-75: pxToRem(15px);
+$font-size-100: pxToRem(17px);
+$font-size-200: pxToRem(19px);
+$font-size-300: pxToRem(22px);
+$font-size-400: pxToRem(24px);
+$font-size-500: pxToRem(27px);
+$font-size-600: pxToRem(31px);
+$font-size-700: pxToRem(34px);
+$font-size-800: pxToRem(39px);
+$font-size-900: pxToRem(44px);
+$font-size-1000: pxToRem(49px);
+$font-size-1100: pxToRem(55px);
+$font-size-1200: pxToRem(62px);
+$font-size-1300: pxToRem(70px);
 
 :root {
   --font-size-50: #{$font-size-50};
@@ -34,20 +35,20 @@ $font-size-1300: 70px;
   --font-size-1300: #{$font-size-1300};
 
   @media (min-width: $scale-desktop-min-width) {
-    --font-size-50: #{ceil($font-size-50 / $scale-desktop-proportion)};
-    --font-size-75: #{ceil($font-size-75 / $scale-desktop-proportion)};
-    --font-size-100: #{ceil($font-size-100 / $scale-desktop-proportion)};
-    --font-size-200: #{ceil($font-size-200 / $scale-desktop-proportion)};
-    --font-size-300: #{ceil($font-size-300 / $scale-desktop-proportion)};
-    --font-size-400: #{ceil($font-size-400 / $scale-desktop-proportion)};
-    --font-size-500: #{ceil($font-size-500 / $scale-desktop-proportion)};
-    --font-size-600: #{ceil($font-size-600 / $scale-desktop-proportion)};
-    --font-size-700: #{ceil($font-size-700 / $scale-desktop-proportion)};
-    --font-size-800: #{ceil($font-size-800 / $scale-desktop-proportion)};
-    --font-size-900: #{ceil($font-size-900 / $scale-desktop-proportion)};
-    --font-size-1000: #{ceil($font-size-1000 / $scale-desktop-proportion)};
-    --font-size-1100: #{ceil($font-size-1100 / $scale-desktop-proportion)};
-    --font-size-1200: #{ceil($font-size-1200 / $scale-desktop-proportion)};
-    --font-size-1300: #{ceil($font-size-1300 / $scale-desktop-proportion)};
+    --font-size-50: #{$font-size-50 / $scale-desktop-proportion};
+    --font-size-75: #{$font-size-75 / $scale-desktop-proportion};
+    --font-size-100: #{$font-size-100 / $scale-desktop-proportion};
+    --font-size-200: #{$font-size-200 / $scale-desktop-proportion};
+    --font-size-300: #{$font-size-300 / $scale-desktop-proportion};
+    --font-size-400: #{$font-size-400 / $scale-desktop-proportion};
+    --font-size-500: #{$font-size-500 / $scale-desktop-proportion};
+    --font-size-600: #{$font-size-600 / $scale-desktop-proportion};
+    --font-size-700: #{$font-size-700 / $scale-desktop-proportion};
+    --font-size-800: #{$font-size-800 / $scale-desktop-proportion};
+    --font-size-900: #{$font-size-900 / $scale-desktop-proportion};
+    --font-size-1000: #{$font-size-1000 / $scale-desktop-proportion};
+    --font-size-1100: #{$font-size-1100 / $scale-desktop-proportion};
+    --font-size-1200: #{$font-size-1200 / $scale-desktop-proportion};
+    --font-size-1300: #{$font-size-1300 / $scale-desktop-proportion};
   }
 }

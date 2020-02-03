@@ -1,2 +1,4 @@
-$scale-desktop-min-width: 768px;
+@import "../functions";
+
+$scale-desktop-min-width: pxToEm(768px);
 $scale-desktop-proportion: 1.25;
