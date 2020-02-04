@@ -1,0 +1,43 @@
+@mixin heading($font-size) {
+  @extend .heading;
+  font-size: $font-size;
+  line-height: calc(#{$font-size} * 1.3);
+  margin-top: calc(#{$font-size} / 1.125);
+  margin-bottom: calc(#{$font-size} * 0.75);
+}
+
+.heading {
+  font-weight: 400;
+
+  &--xxsmall {
+    @include heading(var(--font-size-100))
+  }
+
+  &--xsmall {
+    @include heading(var(--font-size-200))
+  }
+
+  &--small {
+    @include heading(var(--font-size-300))
+  }
+
+  &--medium {
+    @include heading(var(--font-size-500))
+  }
+
+  &--large {
+    @include heading(var(--font-size-700))
+  }
+
+  &--xlarge {
+    @include heading(var(--font-size-900))
+  }
+
+  &--xxlarge {
+    @include heading(var(--font-size-1100))
+  }
+
+  &--xxxlarge {
+    @include heading(var(--font-size-1300))
+  }
+}
