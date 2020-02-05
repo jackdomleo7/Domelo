@@ -1,29 +1,50 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div id="app" class="app">
+    <header class="header-bar"><button @click="toggleSidebar">Toggle nav</button></header>
+    <sidebar :sidebar-open="isSidebarOpen" />
+    <router-view />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
+import Sidebar from "@/components/Sidebar.vue";
 
 @Component({
   components: {
-    HelloWorld,
+    Sidebar,
   },
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  private isSidebarOpen: boolean = false;
+
+  private toggleSidebar() {
+    this.isSidebarOpen = !this.isSidebarOpen;
+  }
+}
 </script>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import "../Domelo.Styles/scss/domelo";
+
+  $header-bar-breakpoint: 961px;
+
+  .app {
+    padding-left: 0;
+
+    @media (min-width: $header-bar-breakpoint) {
+      padding-left: 16rem;
+    }
+
+    .header-bar {
+      width: 100%;
+      height: 4rem;
+      align-items: center;
+      display: flex;
+
+      @media (min-width: 961px) {
+        display: none;
+      }
+    }
+  }
 </style>

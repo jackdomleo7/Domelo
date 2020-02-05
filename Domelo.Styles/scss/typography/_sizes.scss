@@ -1,72 +1,20 @@
 @import "../scale/scale";
 @import "../functions";
 
-$d-m-scale: pxToRem(2px);
-
-$m-font-size-50: pxToRem(13px);
-$m-font-size-75: pxToRem(15px);
-$m-font-size-100: pxToRem(17px);
-$m-font-size-200: pxToRem(19px);
-$m-font-size-300: pxToRem(22px);
-$m-font-size-400: pxToRem(24px);
-$m-font-size-500: pxToRem(27px);
-$m-font-size-600: pxToRem(31px);
-$m-font-size-700: pxToRem(34px);
-$m-font-size-800: pxToRem(39px);
-$m-font-size-900: pxToRem(44px);
-$m-font-size-1000: pxToRem(49px);
-$m-font-size-1100: pxToRem(55px);
-$m-font-size-1200: pxToRem(62px);
-$m-font-size-1300: pxToRem(70px);
-
-$d-font-size-50: calc(#{$m-font-size-50} - #{$d-m-scale});
-$d-font-size-75: calc(#{$m-font-size-75} - #{$d-m-scale});
-$d-font-size-100: calc(#{$m-font-size-100} - #{$d-m-scale});
-$d-font-size-200: calc(#{$m-font-size-200} - #{$d-m-scale});
-$d-font-size-300: calc(#{$m-font-size-300} - #{$d-m-scale});
-$d-font-size-400: calc(#{$m-font-size-400} - #{$d-m-scale});
-$d-font-size-500: calc(#{$m-font-size-500} - #{$d-m-scale});
-$d-font-size-600: calc(#{$m-font-size-600} - #{$d-m-scale});
-$d-font-size-700: calc(#{$m-font-size-700} - #{$d-m-scale});
-$d-font-size-800: calc(#{$m-font-size-800} - #{$d-m-scale});
-$d-font-size-900: calc(#{$m-font-size-900} - #{$d-m-scale});
-$d-font-size-1000: calc(#{$m-font-size-1000} - #{$d-m-scale});
-$d-font-size-1100: calc(#{$m-font-size-1100} - #{$d-m-scale});
-$d-font-size-1200: calc(#{$m-font-size-1200} - #{$d-m-scale});
-$d-font-size-1300: calc(#{$m-font-size-1300} - #{$d-m-scale});
+$font-size-50: pxToRem(11px);
+$font-size-75: pxToRem(14px);
+$font-size-100: pxToRem(16px);
+$font-size-200: pxToRem(20px);
+$font-size-300: pxToRem(28px);
+$font-size-400: pxToRem(36px);
+$font-size-500: pxToRem(44px);
 
 :root {
-  --font-size-50: #{$m-font-size-50};
-  --font-size-75: #{$m-font-size-75};
-  --font-size-100: #{$m-font-size-100};
-  --font-size-200: #{$m-font-size-200};
-  --font-size-300: #{$m-font-size-300};
-  --font-size-400: #{$m-font-size-400};
-  --font-size-500: #{$m-font-size-500};
-  --font-size-600: #{$m-font-size-600};
-  --font-size-700: #{$m-font-size-700};
-  --font-size-800: #{$m-font-size-800};
-  --font-size-900: #{$m-font-size-900};
-  --font-size-1000: #{$m-font-size-1000};
-  --font-size-1100: #{$m-font-size-1100};
-  --font-size-1200: #{$m-font-size-1200};
-  --font-size-1300: #{$m-font-size-1300};
-
-  @media (min-width: $scale-desktop-min-width) {
-    --font-size-50: #{$d-font-size-50};
-    --font-size-75: #{$d-font-size-75};
-    --font-size-100: #{$d-font-size-100};
-    --font-size-200: #{$d-font-size-200};
-    --font-size-300: #{$d-font-size-300};
-    --font-size-400: #{$d-font-size-400};
-    --font-size-500: #{$d-font-size-500};
-    --font-size-600: #{$d-font-size-600};
-    --font-size-700: #{$d-font-size-700};
-    --font-size-800: #{$d-font-size-800};
-    --font-size-900: #{$d-font-size-900};
-    --font-size-1000: #{$d-font-size-1000};
-    --font-size-1100: #{$d-font-size-1100};
-    --font-size-1200: #{$d-font-size-1200};
-    --font-size-1300: #{$d-font-size-1300};
-  }
+  --font-size-50: #{$font-size-50};
+  --font-size-75: #{$font-size-75};
+  --font-size-100: #{$font-size-100};
+  --font-size-200: #{$font-size-200};
+  --font-size-300: #{$font-size-300};
+  --font-size-400: #{$font-size-400};
+  --font-size-500: #{$font-size-500};
 }

@@ -1,18 +1,19 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <page data-page="home">
+    <template #pageTitle>Domelo</template>
+    <template #pageDescription>
+      Domelo is a mobile-first design system created by <a href="https://jackdomleo.dev" target="_blank" rel="noreferrer">Jack Domleo</a> that provides a set of reusable components and provides guidelines on HTML semantics, CSS architecture, accessibility and UI/UX design.
+    </template>
+  </page>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Page from '@/components/Page.vue'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    Page
   }
 }
 </script>
