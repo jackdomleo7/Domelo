@@ -2,7 +2,6 @@
   $rem: $px / 16px;
   @return #{$rem}rem;
 }
-
 @function pxToEm($px) {
   $em: $px / 16px;
   @return #{$em}em;

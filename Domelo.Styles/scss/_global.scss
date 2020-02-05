@@ -10,9 +10,9 @@
 }
 
 ::selection {
-  text-shadow: none;
-  color: rgba(var(--static-white), 1);
   background-color: rgba(var(--static-blue-400), 1);
+  color: rgba(var(--static-white), 1);
+  text-shadow: none;
 }
 
 html {

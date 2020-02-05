@@ -1,13 +1,13 @@
 @import "../scale/scale";
 @import "../functions";
 
-$font-size-50: pxToRem(11px);
-$font-size-75: pxToRem(14px);
-$font-size-100: pxToRem(16px);
-$font-size-200: pxToRem(20px);
-$font-size-300: pxToRem(28px);
-$font-size-400: pxToRem(36px);
-$font-size-500: pxToRem(44px);
+$font-size-50: pxtorem(11px);
+$font-size-75: pxtorem(14px);
+$font-size-100: pxtorem(16px);
+$font-size-200: pxtorem(20px);
+$font-size-300: pxtorem(28px);
+$font-size-400: pxtorem(36px);
+$font-size-500: pxtorem(44px);
 
 :root {
   --font-size-50: #{$font-size-50};
