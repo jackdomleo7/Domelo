@@ -7,12 +7,17 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: () => import('../views/Home.vue'),
+    component: () => import('@/views/Home.vue'),
   },
   {
-    path: '/about',
-    name: 'about',
-    component: () => import('../views/About.vue'),
+    path: '/foundation/color',
+    name: 'color',
+    component: () => import('@/views/foundation/Color.vue'),
+  },
+  {
+    path: '/foundation/typography',
+    name: 'typography',
+    component: () => import('@/views/foundation/Typography.vue'),
   },
 ];
 

@@ -17,7 +17,7 @@
               Foundation
               <ul role="group">
                 <li>
-                  <router-link to="/foundation/colors" disabled>Colors</router-link>
+                  <router-link to="/foundation/color">Colors</router-link>
                 </li>
                 <li>
                   <router-link to="/foundation/typography">Typography</router-link>
