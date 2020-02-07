@@ -1,0 +1,29 @@
+@import "body";
+
+@mixin code($font-size) {
+  @include body($font-size);
+  font-family: "Courier New", monospace;
+  font-weight: var(--font-weight-light);
+}
+
+.code {
+  &--xs {
+    @include code(var(--font-size-50));
+  }
+
+  &--s {
+    @include code(var(--font-size-75));
+  }
+
+  &--m {
+    @include code(var(--font-size-100));
+  }
+
+  &--l {
+    @include code(var(--font-size-200));
+  }
+}
+
+code {
+  @extend .code--m;
+}
