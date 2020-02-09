@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.04c77f4dccdadaa43a713a871f59b2b1.js"
+  "/precache-manifest.619c98b43bfba7cdd07638f805b76931.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "domelo-website"});
