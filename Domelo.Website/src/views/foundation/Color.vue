@@ -15,13 +15,23 @@ import { Component, Vue } from 'vue-property-decorator';
 import Page from '@/components/Page.vue';
 import copy from 'copy-to-clipboard';
 
+export interface IColor {
+  name: string;
+  class: string;
+  variable: string;
+}
+
+export interface IColors {
+  colors: IColor[];
+}
+
 @Component({
   components: { Page },
 })
 export default class Color extends Vue {
-  private copiedVariable: object | null = null;
+  private copiedVariable: IColor | null = null;
 
-  private readonly colors: object[] = [
+  private readonly colors: IColors[] = [
     {
       colors: [
         {
@@ -170,7 +180,7 @@ export default class Color extends Vue {
     },
   ];
 
-  private clickToCopy(color: object) {
+  private clickToCopy(color: IColor) {
     copy(color.variable);
 
     this.copiedVariable = color;
