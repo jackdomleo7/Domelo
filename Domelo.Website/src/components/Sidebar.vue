@@ -70,7 +70,7 @@
   left: auto;
   width: 16rem;
   transform: translateX(0);
-  transition: 160ms transform ease-in-out;
+  transition: var(--transition-timing) transform ease-in-out;
   background-color: rgba(var(--alternate-background-high-color), 1);
   position: fixed;
   z-index: 100;
