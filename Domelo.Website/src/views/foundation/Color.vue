@@ -8,14 +8,14 @@
       </section>
     </figure>
     <article id="css-variables">
-      <h2 class="heading--m">CSS variables</h2>
+      <h2 class="heading--l">CSS variables</h2>
       <p class="body--m">The CSS for the colors <a href="#color-chart">above</a> are not stored as a recognisable color value; hexadecimal or rgb. Instead they are stored as three positive numbered values separated by a comma; the first value is the amount of red, the second value is the amount of green and the third value is the amount of blue. They are stored very similar to rgb, however without the <code class="code--m">rgb()</code> syntax.</p>
       <p class="body--m">The CSS variable for static white is <code class="code--m">--static-white: 255, 255, 255;</code>.</p>
       <p class="body--m">So, to use this in your CSS, simply do <code class="code--m">rgba(var(--static-white), 1)</code>, which is the same as <code class="code--m">rgba(255, 255, 255, 1)</code>.</p>
       <p class="body--m"><em>NOTE:</em> CSS variables done in this way <em>DO NOT</em> work with the CSS <code class="code--m">rgb()</code> property, it only works with the <code class="code--m">rgba()</code> property. The <code class="code--m">rgba()</code> property allows flexibility with the alpha channel/opaqueness of a color, however this should be done carefully.</p>
     </article>
     <article id="themes">
-      <h2 class="heading--m">Themes</h2>
+      <h2 class="heading--l">Themes</h2>
       <p class="body--m">Domelo offers a choice of two themes, light and dark, for user interfaces. Offering a light and dark theme will cover a good ground base of users. The user should be able to switch between themes whenever they please based on their preference and the application should remember or save their latest chosen theme.</p>
       <p class="body--m">To accomplish theming, Domelo uses design tokens to double abstract the theme specific colors from the CSS that makes the component. This is done using CSS variables.</p>
       <ul>
@@ -24,7 +24,7 @@
       </ul>
     </article>
     <article id="greys">
-      <h2 class="heading--m">Greys</h2>
+      <h2 class="heading--l">Greys</h2>
       <p class="body--m">Domelo uses <a href="#grey">11 shades of grey</a>, which are different between the light and dark themes. The greys are neutral (the red, blue and green ratios are equal) meaning they work well alongside any brand colors and ensures they don't distract the user's attention from the main workflow.</p>
       <p class="body--m">The greys have the same CSS variable names across both themes, which allows us to define specific behaviours for each grey:</p>
       <ul>
@@ -39,7 +39,7 @@
       </ul>
     </article>
     <article id="semantic">
-      <h2 class="heading--m">Semantic colors</h2>
+      <h2 class="heading--l">Semantic colors</h2>
       <p class="body--m">Semantic colors have an assigned meaning and are used in the application to communicate these meanings to the user.</p>
       <figure class="semantic">
         <div class="semantic--blue">
@@ -81,7 +81,7 @@
       </figure>
     </article>
     <article id="static">
-      <h2 class="heading--m">Static colors</h2>
+      <h2 class="heading--l">Static colors</h2>
       <p class="body--m">Static colors are persistent across themes. Static colors are <em>white</em>, <em>black</em> and the <em>#400 of each semantic color.</em></p>
     </article>
   </page>

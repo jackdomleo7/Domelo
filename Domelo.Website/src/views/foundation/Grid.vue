@@ -3,7 +3,7 @@
     <template #pageTitle>Grid</template>
     <template #pageDescription>Domelo works really well with any grid system.</template>
     <article id="grids">
-      <h2 class="heading--m">Grids</h2>
+      <h2 class="heading--l">Grids</h2>
       <p class="body--m">Domelo does not have its own grid system, nor does it embed a third party grid system. However, Domelo can be used alongside any grid system. These will have to be embedded into your application separately.</p>
       <p class="body--m">Potential grid systems:</p>
       <ul>

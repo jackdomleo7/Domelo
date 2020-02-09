@@ -1,13 +1,33 @@
 @import "../scale/scale";
 @import "../functions";
 
-$font-size-50: pxtorem(11px);
-$font-size-75: pxtorem(14px);
-$font-size-100: pxtorem(16px);
-$font-size-200: pxtorem(20px);
-$font-size-300: pxtorem(28px);
-$font-size-400: pxtorem(36px);
-$font-size-500: pxtorem(44px);
+$font-size-50: pxtorem(13px);
+$font-size-75: pxtorem(15px);
+$font-size-100: pxtorem(17px);
+$font-size-200: pxtorem(19px);
+$font-size-300: pxtorem(22px);
+$font-size-400: pxtorem(24px);
+$font-size-500: pxtorem(27px);
+$font-size-600: pxtorem(31px);
+$font-size-700: pxtorem(34px);
+$font-size-800: pxtorem(39px);
+$font-size-900: pxtorem(44px);
+$font-size-1000: pxtorem(49px);
+$font-size-1100: pxtorem(55px);
+
+$d-font-size-50: pxtorem(11px);
+$d-font-size-75: pxtorem(12px);
+$d-font-size-100: pxtorem(14px);
+$d-font-size-200: pxtorem(16px);
+$d-font-size-300: pxtorem(18px);
+$d-font-size-400: pxtorem(20px);
+$d-font-size-500: pxtorem(22px);
+$d-font-size-600: pxtorem(25px);
+$d-font-size-700: pxtorem(28px);
+$d-font-size-800: pxtorem(32px);
+$d-font-size-900: pxtorem(36px);
+$d-font-size-1000: pxtorem(40px);
+$d-font-size-1100: pxtorem(45px);
 
 :root {
   --font-size-50: #{$font-size-50};
@@ -17,4 +37,26 @@ $font-size-500: pxtorem(44px);
   --font-size-300: #{$font-size-300};
   --font-size-400: #{$font-size-400};
   --font-size-500: #{$font-size-500};
+  --font-size-600: #{$font-size-600};
+  --font-size-700: #{$font-size-700};
+  --font-size-800: #{$font-size-800};
+  --font-size-900: #{$font-size-900};
+  --font-size-1000: #{$font-size-1000};
+  --font-size-1100: #{$font-size-1100};
+
+  @media screen and (min-width: 768px) {
+    --font-size-50: #{$d-font-size-50};
+    --font-size-75: #{$d-font-size-75};
+    --font-size-100: #{$d-font-size-100};
+    --font-size-200: #{$d-font-size-200};
+    --font-size-300: #{$d-font-size-300};
+    --font-size-400: #{$d-font-size-400};
+    --font-size-500: #{$d-font-size-500};
+    --font-size-600: #{$d-font-size-600};
+    --font-size-700: #{$d-font-size-700};
+    --font-size-800: #{$d-font-size-800};
+    --font-size-900: #{$d-font-size-900};
+    --font-size-1000: #{$d-font-size-1000};
+    --font-size-1100: #{$d-font-size-1100};
+  }
 }
