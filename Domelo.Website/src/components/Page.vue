@@ -20,9 +20,9 @@ export default class Page extends Vue {}
 
 <style lang="scss" scoped>
 .page {
+  margin: 0 auto;
   max-width: 68rem;
   padding: 1rem 2rem;
-  margin: 0 auto;
 
   @media (min-width: 450px) {
     padding: 2.5rem 3.25rem;

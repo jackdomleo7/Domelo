@@ -50,10 +50,10 @@ export default class App extends Vue {
     }
 
     .header-bar {
-      width: 100%;
-      height: 4rem;
       align-items: center;
       display: flex;
+      height: 4rem;
+      width: 100%;
 
       @media (min-width: 961px) {
         display: none;

@@ -67,16 +67,16 @@
 
 <style lang="scss" scoped>
 .sidebar {
-  left: auto;
-  width: 16rem;
-  transform: translateX(0);
-  transition: var(--transition-timing) transform ease-in-out;
   background-color: rgba(var(--alternate-background-high-color), 1);
+  bottom: 0;
+  left: auto;
   position: fixed;
-  z-index: 100;
   right: 100%;
   top: 0;
-  bottom: 0;
+  transform: translateX(0);
+  transition: var(--transition-timing) transform ease-in-out;
+  width: 16rem;
+  z-index: 100;
 
   @media (min-width: 961px) {
     left: 0;
@@ -91,18 +91,18 @@
   }
 
   &__container {
-    height: 100%;
     display: flex;
     flex-direction: column;
+    height: 100%;
   }
 
   &__header {
-    text-align: center;
     padding: 0 3rem;
+    text-align: center;
 
     &-link {
-      text-decoration-line: none;
       display: block;
+      text-decoration-line: none;
     }
 
     &-title {
@@ -112,18 +112,18 @@
 
   &__navigation {
     flex: 1;
-    overflow-y: auto;
     overflow-x: hidden;
+    overflow-y: auto;
   }
 
   &__overlay {
+    background-color: rgba(var(--static-black), 0.4);
+    height: 100vh;
+    left: 0;
     position: fixed;
     top: 0;
-    left: 0;
     width: 100vw;
-    height: 100vh;
     z-index: 99;
-    background-color: rgba(var(--static-black), 0.4);
   }
 }
 </style>

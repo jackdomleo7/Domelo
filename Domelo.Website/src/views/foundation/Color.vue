@@ -281,8 +281,8 @@ export default class Color extends Vue {
 
   &__section {
     display: grid;
-    grid-template: auto / 1fr;
     grid-gap: 1rem;
+    grid-template: auto / 1fr;
     margin: 3rem 0;
 
     @media screen and (min-width: 510px) {
@@ -299,27 +299,27 @@ export default class Color extends Vue {
   }
 
   &__variable {
-    visibility: hidden;
     opacity: 0;
     transition: var(--transition-timing) opacity ease-in-out, var(--transition-timing) visibility ease-in-out;
+    visibility: hidden;
   }
 
   &__item {
     cursor: pointer;
+    font-weight: var(--font-weight-heavy);
     height: 6rem;
-    width: 12rem;
     margin: 0 auto;
     padding: 0.5rem;
     transition: var(--transition-timing) transform ease-in-out, var(--transition-timing) box-shadow ease-in-out;
-    font-weight: var(--font-weight-heavy);
+    width: 12rem;
 
     &:hover {
       box-shadow: var(--box-shadow);
       transform: scale(1.1);
 
       .color-chart__variable {
-        visibility: visible;
         opacity: 1;
+        visibility: visible;
       }
     }
 
@@ -501,11 +501,11 @@ export default class Color extends Vue {
 }
 
 .semantic {
-  width: 100%;
   display: grid;
+  grid-gap: 1rem;
   grid-template: auto / 1fr;
   margin: 0;
-  grid-gap: 1rem;
+  width: 100%;
 
   @media screen and (min-width: 600px) {
     grid-template: auto / 1fr 1fr;
