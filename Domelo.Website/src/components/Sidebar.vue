@@ -46,41 +46,41 @@
 </template>
 
 <script lang="ts">
-  import { Component, Prop, Vue, Watch } from 'vue-property-decorator';
-  import { Routes } from "@/router";
+import { Component, Prop, Vue, Watch } from 'vue-property-decorator';
+import { Routes } from '@/router';
 
-  @Component
-  export default class SideNavigation extends Vue {
-    private Routes: Routes = Routes;
-    private isSidebarOpen: boolean = false;
+@Component
+export default class SideNavigation extends Vue {
+  private Routes: Routes = Routes;
+  private isSidebarOpen: boolean = false;
 
-    @Prop({ type: Boolean, default: false }) private readonly sidebarOpen!: boolean;
+  @Prop({ type: Boolean, default: false }) private readonly sidebarOpen!: boolean;
 
-    @Watch('sidebarOpen')
-    private onSidebarOpenChanged() {
-      this.isSidebarOpen = this.sidebarOpen;
-    }
+  @Watch('sidebarOpen')
+  private onSidebarOpenChanged() {
+    this.isSidebarOpen = this.sidebarOpen;
+  }
 
-    private toggleSidebar() {
-      this.isSidebarOpen = !this.isSidebarOpen;
-    }
+  private toggleSidebar() {
+    this.isSidebarOpen = !this.isSidebarOpen;
+  }
 
-    private created() {
-      this.isSidebarOpen = this.sidebarOpen;
-    }
+  private created() {
+    this.isSidebarOpen = this.sidebarOpen;
+  }
 
-    private toggleTheme() {
-      const html = document.getElementById('html');
-      const darkTheme = 'theme--dark';
-      if (html) {
-        if (html.classList.contains(darkTheme)) {
-          html.classList.remove(darkTheme);
-        } else {
-          html.classList.add(darkTheme);
-        }
+  private toggleTheme() {
+    const html = document.getElementById('html');
+    const darkTheme = 'theme--dark';
+    if (html) {
+      if (html.classList.contains(darkTheme)) {
+        html.classList.remove(darkTheme);
+      } else {
+        html.classList.add(darkTheme);
       }
     }
   }
+}
 </script>
 
 <style lang="scss" scoped>
