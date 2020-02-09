@@ -8,7 +8,8 @@
           </router-link>
           <p>A design system by <a href="https://jackdomleo.dev" target="_blank">Jack Domleo</a></p>
         </div>
-        <div class="sidebar__navigation">
+        <button @click="toggleTheme">Toggle theme</button>
+        <nav class="sidebar__navigation">
           <ul role="tree">
             <li>
               <router-link to="/">Home</router-link>
@@ -34,7 +35,7 @@
               </ul>
             </li>
           </ul>
-        </div>
+        </nav>
       </div>
     </aside>
     <div v-if="isSidebarOpen" class="sidebar__overlay" @click="toggleSidebar"></div>
@@ -61,6 +62,18 @@
 
     private created() {
       this.isSidebarOpen = this.sidebarOpen;
+    }
+
+    private toggleTheme() {
+      const html = document.getElementById('html');
+      const darkTheme = 'theme--dark';
+      if (html) {
+        if (html.classList.contains(darkTheme)) {
+          html.classList.remove(darkTheme);
+        } else {
+          html.classList.add(darkTheme);
+        }
+      }
     }
   }
 </script>

@@ -2,7 +2,6 @@
   <div id="app" class="app">
     <header class="header-bar"><button @click="toggleSidebar">Toggle nav</button></header>
     <sidebar :sidebar-open="isSidebarOpen" />
-    <button @click="toggleTheme">Toggle theme</button>
     <router-view />
   </div>
 </template>
@@ -21,18 +20,6 @@ export default class App extends Vue {
 
   private toggleSidebar() {
     this.isSidebarOpen = !this.isSidebarOpen;
-  }
-
-  private toggleTheme() {
-    const html = document.getElementById('html');
-    const darkTheme = 'theme--dark';
-    if (html) {
-      if (html.classList.contains(darkTheme)) {
-        html.classList.remove(darkTheme);
-      } else {
-        html.classList.add(darkTheme);
-      }
-    }
   }
 }
 </script>
