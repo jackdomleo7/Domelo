@@ -20,9 +20,5 @@ import Page from '@/components/Page.vue';
 @Component({
   components: { Page },
 })
-export default class Typography extends Vue {}
+export default class Reset extends Vue {}
 </script>
-
-<style scoped>
-
-</style>

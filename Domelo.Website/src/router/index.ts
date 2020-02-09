@@ -24,6 +24,11 @@ const routes = [
     name: 'reset-stylesheet',
     component: () => import('@/views/foundation/Reset.vue'),
   },
+  {
+    path: '/foundation/grid',
+    name: 'grid',
+    component: () => import('@/views/foundation/Grid.vue'),
+  },
 ];
 
 const router = new VueRouter({
