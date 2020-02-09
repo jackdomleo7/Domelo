@@ -1,4 +1,9 @@
 @import "../functions";
 
-$scale-desktop-min-width: pxtoem(768px);
-$scale-desktop-proportion: 1.25;
+$scale-mobile-px: 768px;
+$scale-mobile: pxtoem($scale-mobile-px);
+$scale-desktop: pxtoem($scale-mobile-px + 1px);
+
+:root {
+  --desktop-scale-proportions: 0.8;
+}

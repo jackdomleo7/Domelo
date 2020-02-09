@@ -24,7 +24,7 @@
                   <router-link to="/foundation/typography">Typography</router-link>
                 </li>
                 <li>
-                  <router-link to="/foundation/scale">Platform scale</router-link>
+                  <router-link to="/foundation/platform-scale">Platform scale</router-link>
                 </li>
                 <li>
                   <router-link to="/foundation/reset-stylesheet">Reset stylesheet</router-link>

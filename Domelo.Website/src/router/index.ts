@@ -15,9 +15,9 @@ const routes = [
     component: () => import('@/views/foundation/Color.vue'),
   },
   {
-    path: '/foundation/typography',
-    name: 'typography',
-    component: () => import('@/views/foundation/Typography.vue'),
+    path: '/foundation/grid',
+    name: 'grid',
+    component: () => import('@/views/foundation/Grid.vue'),
   },
   {
     path: '/foundation/reset-stylesheet',
@@ -25,9 +25,14 @@ const routes = [
     component: () => import('@/views/foundation/Reset.vue'),
   },
   {
-    path: '/foundation/grid',
-    name: 'grid',
-    component: () => import('@/views/foundation/Grid.vue'),
+    path: '/foundation/platform-scale',
+    name: 'platform-scale',
+    component: () => import('@/views/foundation/Scale.vue'),
+  },
+  {
+    path: '/foundation/typography',
+    name: 'typography',
+    component: () => import('@/views/foundation/Typography.vue'),
   },
 ];
 
