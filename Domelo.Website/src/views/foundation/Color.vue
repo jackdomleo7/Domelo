@@ -18,7 +18,7 @@
     </article>
     <article id="greys">
       <h2 class="heading--m">Greys</h2>
-      <p class="body--m">Domelo uses <a href="#greys">11 shades of grey</a>, which are different between the light and dark themes. The greys are neutral (the red, blue and green ratios are equal) meaning they work well alongside any brand colors and ensures they don't distract the user's attention from the main workflow.</p>
+      <p class="body--m">Domelo uses <a href="#grey">11 shades of grey</a>, which are different between the light and dark themes. The greys are neutral (the red, blue and green ratios are equal) meaning they work well alongside any brand colors and ensures they don't distract the user's attention from the main workflow.</p>
       <p class="body--m">The greys have the same CSS variable names across both themes, which allows us to define specific behaviours for each grey:</p>
       <ul>
         <li class="greys--grey-900">Grey 900: High contrast text content (default text color)</li>
@@ -30,6 +30,48 @@
         <li class="greys--grey-75">Grey 75: High alternate background</li>
         <li class="greys--grey-50">Grey 50: Low alternate background</li>
       </ul>
+    </article>
+    <article id="semantic">
+      <h2 class="heading--m">Semantic colors</h2>
+      <p class="body--m">Semantic colors have an assigned meaning and are used in the application to communicate these meanings to the user.</p>
+      <figure class="semantic">
+        <div class="semantic--blue">
+          <span class="semantic__label body--s">Informative</span>
+          <div class="semantic__shades">
+            <span class="semantic__shade semantic--blue-400"></span>
+            <span class="semantic__shade semantic--blue-500"></span>
+            <span class="semantic__shade semantic--blue-600"></span>
+            <span class="semantic__shade semantic--blue-700"></span>
+          </div>
+        </div>
+        <div class="semantic--red">
+          <span class="semantic__label body--s">Negative</span>
+          <div class="semantic__shades">
+            <span class="semantic__shade semantic--red-400"></span>
+            <span class="semantic__shade semantic--red-500"></span>
+            <span class="semantic__shade semantic--red-600"></span>
+            <span class="semantic__shade semantic--red-700"></span>
+          </div>
+        </div>
+        <div class="semantic--orange">
+          <span class="semantic__label body--s">Notice</span>
+          <div class="semantic__shades">
+            <span class="semantic__shade semantic--orange-400"></span>
+            <span class="semantic__shade semantic--orange-500"></span>
+            <span class="semantic__shade semantic--orange-600"></span>
+            <span class="semantic__shade semantic--orange-700"></span>
+          </div>
+        </div>
+        <div class="semantic--green">
+          <span class="semantic__label body--s">Positive</span>
+          <div class="semantic__shades">
+            <span class="semantic__shade semantic--green-400"></span>
+            <span class="semantic__shade semantic--green-500"></span>
+            <span class="semantic__shade semantic--green-600"></span>
+            <span class="semantic__shade semantic--green-700"></span>
+          </div>
+        </div>
+      </figure>
     </article>
   </page>
 </template>
@@ -72,7 +114,7 @@ export default class Color extends Vue {
       ] as IColor[],
     },
     {
-      id: 'greys',
+      id: 'grey',
       colors: [
         {
           name: 'Grey 50',
@@ -444,6 +486,92 @@ export default class Color extends Vue {
 
   &--grey-50 {
     background-color: rgba(var(--grey-50), 1);
+  }
+}
+
+.semantic {
+  width: 100%;
+  display: grid;
+  grid-template: auto / 1fr 1fr 1fr 1fr;
+  margin: 0;
+  grid-gap: 1rem;
+
+  &__label {
+    font-weight: var(--font-weight-heavy);
+  }
+
+  &__shades {
+    display: flex;
+    height: 2rem;
+    margin: 0.5rem 0;
+  }
+
+  &__shade {
+    width: 25%;
+  }
+
+  &--blue-400 {
+    background-color: rgba(var(--static-blue-400), 1);
+  }
+
+  &--blue-500 {
+    background-color: rgba(var(--blue-500), 1);
+  }
+
+  &--blue-600 {
+    background-color: rgba(var(--blue-600), 1);
+  }
+
+  &--blue-700 {
+    background-color: rgba(var(--blue-700), 1);
+  }
+
+  &--red-400 {
+    background-color: rgba(var(--static-red-400), 1);
+  }
+
+  &--red-500 {
+    background-color: rgba(var(--red-500), 1);
+  }
+
+  &--red-600 {
+    background-color: rgba(var(--red-600), 1);
+  }
+
+  &--red-700 {
+    background-color: rgba(var(--red-700), 1);
+  }
+
+  &--orange-400 {
+    background-color: rgba(var(--static-orange-400), 1);
+  }
+
+  &--orange-500 {
+    background-color: rgba(var(--orange-500), 1);
+  }
+
+  &--orange-600 {
+    background-color: rgba(var(--orange-600), 1);
+  }
+
+  &--orange-700 {
+    background-color: rgba(var(--orange-700), 1);
+  }
+
+  &--green-400 {
+    background-color: rgba(var(--static-green-400), 1);
+  }
+
+  &--green-500 {
+    background-color: rgba(var(--green-500), 1);
+  }
+
+  &--green-600 {
+    background-color: rgba(var(--green-600), 1);
+  }
+
+  &--green-700 {
+    background-color: rgba(var(--green-700), 1);
   }
 }
 </style>
