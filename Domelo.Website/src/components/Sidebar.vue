@@ -12,25 +12,28 @@
         <nav class="sidebar__navigation">
           <ul role="tree">
             <li>
-              <router-link to="/">Home</router-link>
+              <router-link :to="{ name: Routes.Home }">Home</router-link>
             </li>
             <li>
               Foundation
               <ul role="group">
                 <li>
-                  <router-link to="/foundation/color">Colors</router-link>
+                  <router-link :to="{ name: Routes.FoundationColor }">Color</router-link>
                 </li>
                 <li>
-                  <router-link to="/foundation/typography">Typography</router-link>
+                  <router-link :to="{ name: Routes.FoundationTypography }">Typography</router-link>
                 </li>
                 <li>
-                  <router-link to="/foundation/platform-scale">Platform scale</router-link>
+                  <router-link :to="{ name: Routes.FoundationPlatformScale }">Platform scale</router-link>
                 </li>
                 <li>
-                  <router-link to="/foundation/reset-stylesheet">Reset stylesheet</router-link>
+                  <router-link :to="{ name: Routes.FoundationObjectStyles }">Object styles</router-link>
                 </li>
                 <li>
-                  <router-link to="/foundation/grid">Grid</router-link>
+                  <router-link :to="{ name: Routes.FoundationResetStylesheet }">Reset stylesheet</router-link>
+                </li>
+                <li>
+                  <router-link :to="{ name: Routes.FoundationGrid }">Grid</router-link>
                 </li>
               </ul>
             </li>
@@ -43,10 +46,12 @@
 </template>
 
 <script lang="ts">
-  import { Component, Emit, Prop, Vue, Watch } from 'vue-property-decorator';
+  import { Component, Prop, Vue, Watch } from 'vue-property-decorator';
+  import { Routes } from "@/router";
 
   @Component
   export default class SideNavigation extends Vue {
+    private Routes: Routes = Routes;
     private isSidebarOpen: boolean = false;
 
     @Prop({ type: Boolean, default: false }) private readonly sidebarOpen!: boolean;
