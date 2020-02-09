@@ -13,9 +13,9 @@
     <article id="sizes">
       <h2 class="heading--m">Font sizes</h2>
       <p class="body--m">All Domelo font sizes are identified in pixels for easy identification, but should be defined in the CSS as rems. Rems can be calculated using the following calculation: <span class="code--m">rem = px / 16</span></p>
-      <table class="font-sizes body--m">
-        <thead class="font-sizes__header body--s">
-        <tr>
+      <table class="table body--m">
+        <thead class="table__header body--s">
+        <tr class="table__row">
           <th>Name</th>
           <th>Variable</th>
           <th>Pixels</th>
@@ -23,9 +23,9 @@
         </tr>
         </thead>
         <tbody>
-        <tr v-for="(size, index) in fontSizes" :key="index" class="font-sizes__row">
-          <td>{{ size.name }}</td>
-          <td class="body--m"><code v-if="copiedVariable !== size" class="font-sizes__variable code--m" @click="copyToClipboard(size)" @keydown.enter="copyToClipboard(size)" tabindex="0">{{ size.variable }}</code><span v-if="copiedVariable === size">Copied!!</span></td>
+        <tr v-for="(size, index) in fontSizes" :key="index" class="table__row">
+          <td class="body--m">{{ size.name }}</td>
+          <td class="body--m"><code v-if="copiedVariable !== size.variable" class="table__copy code--m" @click="copyToClipboard(size.variable)" @keydown.enter="copyToClipboard(size.variable)" tabindex="0">{{ size.variable }}</code><span v-if="copiedVariable === size.variable">Copied!!</span></td>
           <td class="code--m">{{ size.pixels }}px</td>
           <td class="code--m">{{ pxToRem(size.pixels) }}rem</td>
         </tr>
@@ -35,6 +35,24 @@
     <article id="weights">
       <h2 class="heading--m">Font weights</h2>
       <p class="body--m">Domelo uses three font weights, <span class="weight--light">light</span> (<code class="code--m">font-weight: 300;</code>), <span class="weight--medium">medium</span> (<code class="code--m">font-weight: 400;</code>) and <span class="weight--heavy">heavy</span> (<code class="code--m">font-weight: 400;</code>).</p>
+      <table class="table">
+        <thead class="table__header body--s">
+        <tr class="table__row">
+          <th>Name</th>
+          <th>Variable</th>
+          <th>Class</th>
+          <th>Weight</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="table__row" v-for="(weight, index) in fontWeights" :key="index">
+          <td class="body--m">{{ weight.name }}</td>
+          <td class="body--m"><code v-if="copiedVariable !== weight.variable" class="table__copy code--m" @click="copyToClipboard(weight.variable)" @keydown.enter="copyToClipboard(weight.variable)" tabindex="0">{{ weight.variable }}</code><span v-if="copiedVariable === weight.variable">Copied!!</span></td>
+          <td class="body--m"><code v-if="copiedVariable !== weight.class" class="table__copy code--m" @click="copyToClipboard(weight.class)" @keydown.enter="copyToClipboard(weight.class)" tabindex="0">{{ weight.class }}</code><span v-if="copiedVariable === weight.class">Copied!!</span></td>
+          <td class="body--m">{{ weight.weight }}</td>
+        </tr>
+        </tbody>
+      </table>
     </article>
     <article id="headings">
       <h2 class="heading--m">Headings</h2>
@@ -71,11 +89,18 @@ export interface IFontSize {
   pixels: number;
 }
 
+export interface IFontWeight {
+  name: string;
+  variable: string;
+  class: string;
+  weight: number;
+}
+
 @Component({
   components: { Page },
 })
 export default class Typography extends Vue {
-  private copiedVariable: IFontSize | null = null;
+  private copiedVariable: string | null = null;
 
   private readonly fontSizes: IFontSize[] = [
     {
@@ -109,14 +134,33 @@ export default class Typography extends Vue {
     },
   ];
 
+  private readonly fontWeights: IFontWeight[] = [
+    {
+      name: 'Weight light',
+      variable: '--font-weight-light',
+      class: 'weight-light',
+      weight: 300,
+    }, {
+      name: 'Weight medium',
+      variable: '--font-weight-medium',
+      class: 'weight-medium',
+      weight: 400,
+    }, {
+      name: 'Weight heavy',
+      variable: '--font-weight-heavy',
+      class: 'weight-heavy',
+      weight: 600,
+    },
+  ];
+
   private pxToRem(px: number) {
     return px / 16;
   }
 
-  private copyToClipboard(fontSize: IFontSize) {
-    copy(fontSize.variable);
+  private copyToClipboard(text: string) {
+    copy(text);
 
-    this.copiedVariable = fontSize;
+    this.copiedVariable = text;
     window.setTimeout(() => {
       this.copiedVariable = null;
     }, 500);
@@ -125,7 +169,7 @@ export default class Typography extends Vue {
 </script>
 
 <style lang="scss" scoped>
-.font-sizes {
+.table {
   width: 100%;
 
   &__header {
@@ -136,7 +180,7 @@ export default class Typography extends Vue {
     height: 2rem;
   }
 
-  &__variable {
+  &__copy {
     cursor: pointer;
   }
 }
