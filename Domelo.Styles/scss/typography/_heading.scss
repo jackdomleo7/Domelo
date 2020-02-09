@@ -1,3 +1,5 @@
+@import "../scale/scale";
+
 @mixin heading($font-size) {
   font-size: $font-size;
   font-weight: var(--font-weight-heavy);
@@ -32,7 +34,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $scale-desktop) {
   .heading {
     &--xl {
       @include heading(var(--font-size-1100));

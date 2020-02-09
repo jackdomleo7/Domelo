@@ -18,16 +18,16 @@
         <tr class="table__row">
           <th>Name</th>
           <th>Variable</th>
-          <th>Desktop</th>
           <th>Mobile</th>
+          <th>Desktop</th>
         </tr>
         </thead>
         <tbody>
         <tr v-for="(size, index) in fontSizes" :key="index" class="table__row">
           <td class="body--m">{{ size.name }}</td>
           <td class="body--m"><code v-if="copiedVariable !== size.variable" class="table__copy code--m" @click="copyToClipboard(size.variable)" @keydown.enter="copyToClipboard(size.variable)" tabindex="0">{{ size.variable }}</code><span v-if="copiedVariable === size.variable">Copied!!</span></td>
-          <td class="code--m">{{ size.desktop }}<span aria-label="pixels">px</span> / {{ pxToRem(size.desktop) }}rem</td>
           <td class="code--m">{{ size.mobile }}<span aria-label="pixels">px</span> / {{ pxToRem(size.mobile) }}rem</td>
+          <td class="code--m">{{ size.desktop }}<span aria-label="pixels">px</span> / {{ pxToRem(size.desktop) }}rem</td>
         </tr>
         </tbody>
       </table>
@@ -90,8 +90,8 @@ import copy from 'copy-to-clipboard';
 export interface IFontSize {
   name: string;
   variable: string;
-  desktop: number;
   mobile: number;
+  desktop: number;
 }
 
 export interface IFontWeight {
@@ -111,68 +111,68 @@ export default class Typography extends Vue {
     {
       name: 'Font size 50',
       variable: '--font-size-50',
-      desktop: 11,
       mobile: 13,
+      desktop: 11,
     }, {
       name: 'Font size 75',
       variable: '--font-size-75',
-      desktop: 12,
       mobile: 15,
+      desktop: 12,
     }, {
       name: 'Font size 100',
       variable: '--font-size-100',
-      desktop: 14,
       mobile: 17,
+      desktop: 14,
     }, {
       name: 'Font size 200',
       variable: '--font-size-200',
-      desktop: 16,
       mobile: 19,
+      desktop: 16,
     }, {
       name: 'Font size 300',
       variable: '--font-size-300',
-      desktop: 18,
       mobile: 22,
+      desktop: 18,
     }, {
       name: 'Font size 400',
       variable: '--font-size-400',
-      desktop: 20,
       mobile: 24,
+      desktop: 20,
     }, {
       name: 'Font size 500',
       variable: '--font-size-500',
-      desktop: 22,
       mobile: 27,
+      desktop: 22,
     }, {
       name: 'Font size 600',
       variable: '--font-size-600',
-      desktop: 25,
       mobile: 31,
+      desktop: 25,
     }, {
       name: 'Font size 700',
       variable: '--font-size-700',
-      desktop: 28,
       mobile: 34,
+      desktop: 28,
     }, {
       name: 'Font size 800',
       variable: '--font-size-800',
-      desktop: 32,
       mobile: 39,
+      desktop: 32,
     }, {
       name: 'Font size 900',
       variable: '--font-size-900',
-      desktop: 36,
       mobile: 44,
+      desktop: 36,
     }, {
       name: 'Font size 1000',
       variable: '--font-size-1000',
-      desktop: 40,
       mobile: 49,
+      desktop: 40,
     }, {
       name: 'Font size 1100',
       variable: '--font-size-1100',
-      desktop: 45,
       mobile: 55,
+      desktop: 45,
     },
   ];
 

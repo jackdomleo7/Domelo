@@ -3,7 +3,7 @@
     <h1 class="heading--xl page__heading">
       <slot name="pageTitle" />
     </h1>
-    <p class="body--l weight--light">
+    <p class="body--xl weight--light">
       <slot name="pageDescription" />
     </p>
     <slot />
