@@ -4,7 +4,7 @@
     <template #pageDescription>Domelo colors are designed to be clear and accessible. There are two themes available, light and dark. Each theme consists of a range of greys and semantic colors.</template>
     <figure class="color-chart body--s">
       <section v-for="(category, index) in colors" :key="index" class="color-chart__section">
-        <div v-for="(color, index) in category.colors" :key="index" class="color-chart__item" :class="'color-chart__item--' + color.class" @click="clickToCopy(color)">{{ color.name }}<span v-if="copiedVariable === color" class="body--xs"><br/>Copied!!</span></div>
+        <div v-for="(color, index) in category.colors" :key="index" class="color-chart__item" :class="'color-chart__item--' + color.class" @click="clickToCopy(color)">{{ color.name }}<span v-if="copiedVariable !== color" class="body--xs color-chart__variable"><br/>{{ color.variable }}</span><span v-if="copiedVariable === color" class="body--xs"><br/>Copied!!</span></div>
       </section>
     </figure>
   </page>
@@ -204,6 +204,12 @@ export default class Color extends Vue {
     }
   }
 
+  &__variable {
+    visibility: hidden;
+    opacity: 0;
+    transition: 160ms opacity ease-in-out, 160ms visibility ease-in-out;
+  }
+
   &__item {
     cursor: pointer;
     height: 6rem;
@@ -216,6 +222,11 @@ export default class Color extends Vue {
     &:hover {
       box-shadow: var(--box-shadow);
       transform: scale(1.1);
+
+      .color-chart__variable {
+        visibility: visible;
+        opacity: 1;
+      }
     }
 
     &--white {
