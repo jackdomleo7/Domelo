@@ -3,46 +3,8 @@
     <template #pageTitle>Color</template>
     <template #pageDescription>Domelo colors are designed to be clear and accessible. There are two themes available, light and dark. Each theme consists of a range of greys and semantic colors.</template>
     <figure class="color-chart body--s">
-      <section class="color-chart__section">
-        <div class="color-chart__item color-chart__item--white">Static white</div>
-        <div class="color-chart__item color-chart__item--black">Static black</div>
-      </section>
-      <section class="color-chart__section">
-        <div class="color-chart__item color-chart__item--grey-50">Grey 50</div>
-        <div class="color-chart__item color-chart__item--grey-75">Grey 75</div>
-        <div class="color-chart__item color-chart__item--grey-100">Grey 100</div>
-        <div class="color-chart__item color-chart__item--grey-200">Grey 200</div>
-        <div class="color-chart__item color-chart__item--grey-300">Grey 300</div>
-        <div class="color-chart__item color-chart__item--grey-400">Grey 400</div>
-        <div class="color-chart__item color-chart__item--grey-500">Grey 500</div>
-        <div class="color-chart__item color-chart__item--grey-600">Grey 600</div>
-        <div class="color-chart__item color-chart__item--grey-700">Grey 700</div>
-        <div class="color-chart__item color-chart__item--grey-800">Grey 800</div>
-        <div class="color-chart__item color-chart__item--grey-900">Grey 900</div>
-      </section>
-      <section class="color-chart__section">
-        <div class="color-chart__item color-chart__item--blue-400">Static blue 400</div>
-        <div class="color-chart__item color-chart__item--blue-500">Blue 500</div>
-        <div class="color-chart__item color-chart__item--blue-600">Blue 600</div>
-        <div class="color-chart__item color-chart__item--blue-700">Blue 700</div>
-      </section>
-      <section class="color-chart__section">
-        <div class="color-chart__item color-chart__item--red-400">Static Red 400</div>
-        <div class="color-chart__item color-chart__item--red-500">Red 500</div>
-        <div class="color-chart__item color-chart__item--red-600">Red 600</div>
-        <div class="color-chart__item color-chart__item--red-700">Red 700</div>
-      </section>
-      <section class="color-chart__section">
-        <div class="color-chart__item color-chart__item--orange-400">Static Orange 400</div>
-        <div class="color-chart__item color-chart__item--orange-500">Orange 500</div>
-        <div class="color-chart__item color-chart__item--orange-600">Orange 600</div>
-        <div class="color-chart__item color-chart__item--orange-700">Orange 700</div>
-      </section>
-      <section class="color-chart__section">
-        <div class="color-chart__item color-chart__item--green-400">Static Green 400</div>
-        <div class="color-chart__item color-chart__item--green-500">Green 500</div>
-        <div class="color-chart__item color-chart__item--green-600">Green 600</div>
-        <div class="color-chart__item color-chart__item--green-700">Green 700</div>
+      <section v-for="(category, index) in colors" :key="index" class="color-chart__section">
+        <div v-for="(color, index) in category.colors" :key="index" class="color-chart__item" :class="'color-chart__item--' + color.class" @click="clickToCopy(color)">{{ color.name }}<span v-if="copiedVariable === color" class="body--xs"><br/>Copied!!</span></div>
       </section>
     </figure>
   </page>
@@ -51,11 +13,172 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import Page from '@/components/Page.vue';
+import copy from 'copy-to-clipboard';
 
 @Component({
   components: { Page },
 })
-export default class Color extends Vue {}
+export default class Color extends Vue {
+  private copiedVariable: object | null = null;
+
+  private readonly colors: object[] = [
+    {
+      colors: [
+        {
+          name: 'Static white',
+          class: 'white',
+          variable: '--static-white',
+        }, {
+          name: 'Static black',
+          class: 'black',
+          variable: '--static-black',
+        },
+      ],
+    },
+    {
+      colors: [
+        {
+          name: 'Grey 50',
+          class: 'grey-50',
+          variable: '--grey-50',
+        }, {
+          name: 'Grey 75',
+          class: 'grey-75',
+          variable: '--grey-75',
+        }, {
+          name: 'Grey 100',
+          class: 'grey-100',
+          variable: '--grey-100',
+        }, {
+          name: 'Grey 200',
+          class: 'grey-200',
+          variable: '--grey-200',
+        }, {
+          name: 'Grey 300',
+          class: 'grey-300',
+          variable: '--grey-300',
+        }, {
+          name: 'Grey 400',
+          class: 'grey-400',
+          variable: '--grey-400',
+        }, {
+          name: 'Grey 500',
+          class: 'grey-500',
+          variable: '--grey-500',
+        }, {
+          name: 'Grey 600',
+          class: 'grey-600',
+          variable: '--grey-600',
+        }, {
+          name: 'Grey 700',
+          class: 'grey-700',
+          variable: '--grey-700',
+        }, {
+          name: 'Grey 800',
+          class: 'grey-800',
+          variable: '--grey-800',
+        }, {
+          name: 'Grey 900',
+          class: 'grey-900',
+          variable: '--grey-900',
+        },
+      ],
+    },
+    {
+      colors: [
+        {
+          name: 'Blue 400',
+          class: 'blue-400',
+          variable: '--static-blue-400',
+        }, {
+          name: 'Blue 500',
+          class: 'blue-500',
+          variable: '--blue-500',
+        }, {
+          name: 'Blue 600',
+          class: 'blue-600',
+          variable: '--blue-600',
+        }, {
+          name: 'Blue 700',
+          class: 'blue-700',
+          variable: '--blue-700',
+        },
+      ],
+    },
+    {
+      colors: [
+        {
+          name: 'Red 400',
+          class: 'red-400',
+          variable: '--static-red-400',
+        }, {
+          name: 'Red 500',
+          class: 'red-500',
+          variable: '--red-500',
+        }, {
+          name: 'Red 600',
+          class: 'red-600',
+          variable: '--red-600',
+        }, {
+          name: 'Red 700',
+          class: 'red-700',
+          variable: '--red-700',
+        },
+      ],
+    },
+    {
+      colors: [
+        {
+          name: 'Orange 400',
+          class: 'orange-400',
+          variable: '--static-orange-400',
+        }, {
+          name: 'Orange 500',
+          class: 'orange-500',
+          variable: '--orange-500',
+        }, {
+          name: 'Orange 600',
+          class: 'orange-600',
+          variable: '--orange-600',
+        }, {
+          name: 'Orange 700',
+          class: 'orange-700',
+          variable: '--orange-700',
+        },
+      ],
+    },
+    {
+      colors: [
+        {
+          name: 'Green 400',
+          class: 'green-400',
+          variable: '--static-green-400',
+        }, {
+          name: 'Green 500',
+          class: 'green-500',
+          variable: '--green-500',
+        }, {
+          name: 'Green 600',
+          class: 'green-600',
+          variable: '--green-600',
+        }, {
+          name: 'Green 700',
+          class: 'green-700',
+          variable: '--green-700',
+        },
+      ],
+    },
+  ];
+
+  private clickToCopy(color: object) {
+    copy(color.variable);
+
+    this.copiedVariable = color;
+    window.setTimeout(() => {
+      this.copiedVariable = null;
+    }, 500);
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -82,6 +205,7 @@ export default class Color extends Vue {}
   }
 
   &__item {
+    cursor: pointer;
     height: 6rem;
     width: 12rem;
     margin: 0 auto;
