@@ -27,7 +27,7 @@
                   <router-link to="/foundation/scale">Platform scale</router-link>
                 </li>
                 <li>
-                  <router-link to="/foundation/reset">Reset stylesheet</router-link>
+                  <router-link to="/foundation/reset-stylesheet">Reset stylesheet</router-link>
                 </li>
                 <li>
                   <router-link to="/foundation/grid">Grid</router-link>

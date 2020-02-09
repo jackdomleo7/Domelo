@@ -3,7 +3,7 @@
     <h1 class="heading--l page__heading">
       <slot name="pageTitle" />
     </h1>
-    <p class="body--m page__description">
+    <p class="body--l weight--light">
       <slot name="pageDescription" />
     </p>
     <slot />
@@ -30,10 +30,6 @@ export default class Page extends Vue {}
 
   &__heading {
     margin-top: 0;
-  }
-
-  &__description {
-    font-weight: var(--font-weight-light);
   }
 }
 </style>
