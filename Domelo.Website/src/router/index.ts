@@ -19,6 +19,11 @@ const routes = [
     name: 'typography',
     component: () => import('@/views/foundation/Typography.vue'),
   },
+  {
+    path: '/foundation/reset-stylesheet',
+    name: 'reset-stylesheet',
+    component: () => import('@/views/foundation/Reset.vue'),
+  },
 ];
 
 const router = new VueRouter({
