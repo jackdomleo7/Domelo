@@ -2,11 +2,18 @@
   <page data-page="colors">
     <template #pageTitle>Color</template>
     <template #pageDescription>Domelo colors are designed to be clear and accessible. There are two themes available, light and dark. Each theme consists of a range of greys and semantic colors.</template>
-    <figure class="color-chart body--s">
+    <figure class="color-chart body--s" id="color-chart">
       <section v-for="(category, index) in colors" :key="index" :id="category.id" class="color-chart__section">
         <div v-for="(color, index) in category.colors" :key="index" class="color-chart__item" :class="'color-chart__item--' + color.class" @click="clickToCopy(color)">{{ color.name }}<span v-if="copiedVariable !== color" class="body--xs color-chart__variable"><br/>{{ color.variable }}</span><span v-if="copiedVariable === color" class="body--xs"><br/>Copied!!</span></div>
       </section>
     </figure>
+    <article id="css-variables">
+      <h2 class="heading--m">CSS variables</h2>
+      <p class="body--m">The CSS for the colors <a href="#color-chart">above</a> are not stored as a recognisable color value; hexadecimal or rgb. Instead they are stored as three positive numbered values separated by a comma; the first value is the amount of red, the second value is the amount of green and the third value is the amount of blue. They are stored very similar to rgb, however without the <code class="code--m">rgb()</code> syntax.</p>
+      <p class="body--m">The CSS variable for static white is <code class="code--m">--static-white: 255, 255, 255;</code>.</p>
+      <p class="body--m">So, to use this in your CSS, simply do <code class="code--m">rgba(var(--static-white), 1)</code>, which is the same as <code class="code--m">rgba(255, 255, 255, 1)</code>.</p>
+      <p class="body--m"><em>NOTE:</em> CSS variables done in this way <em>DO NOT</em> work with the CSS <code class="code--m">rgb()</code> property, it only works with the <code class="code--m">rgba()</code> property. The <code class="code--m">rgba()</code> property allows flexibility with the alpha channel/opaqueness of a color, however this should be done carefully.</p>
+    </article>
     <article id="themes">
       <h2 class="heading--m">Themes</h2>
       <p class="body--m">Domelo offers a choice of two themes, light and dark, for user interfaces. Offering a light and dark theme will cover a good ground base of users. The user should be able to switch between themes whenever they please based on their preference and the application should remember or save their latest chosen theme.</p>
@@ -72,6 +79,10 @@
           </div>
         </div>
       </figure>
+    </article>
+    <article id="static">
+      <h2 class="heading--m">Static colors</h2>
+      <p class="body--m">Static colors are persistent across themes. Static colors are <em>white</em>, <em>black</em> and the <em>#400 of each semantic color.</em></p>
     </article>
   </page>
 </template>
@@ -167,7 +178,7 @@ export default class Color extends Vue {
       id: 'blue',
       colors: [
         {
-          name: 'Blue 400',
+          name: 'Static blue 400',
           class: 'blue-400',
           variable: '--static-blue-400',
         }, {
@@ -189,7 +200,7 @@ export default class Color extends Vue {
       id: 'red',
       colors: [
         {
-          name: 'Red 400',
+          name: 'Static red 400',
           class: 'red-400',
           variable: '--static-red-400',
         }, {
@@ -211,7 +222,7 @@ export default class Color extends Vue {
       id: 'orange',
       colors: [
         {
-          name: 'Orange 400',
+          name: 'Static orange 400',
           class: 'orange-400',
           variable: '--static-orange-400',
         }, {
@@ -233,7 +244,7 @@ export default class Color extends Vue {
       id: 'green',
       colors: [
         {
-          name: 'Green 400',
+          name: 'Static green 400',
           class: 'green-400',
           variable: '--static-green-400',
         }, {
@@ -492,9 +503,17 @@ export default class Color extends Vue {
 .semantic {
   width: 100%;
   display: grid;
-  grid-template: auto / 1fr 1fr 1fr 1fr;
+  grid-template: auto / 1fr;
   margin: 0;
   grid-gap: 1rem;
+
+  @media screen and (min-width: 600px) {
+    grid-template: auto / 1fr 1fr;
+  }
+
+  @media screen and (min-width: 1150px) {
+    grid-template: auto / 1fr 1fr 1fr 1fr;
+  }
 
   &__label {
     font-weight: var(--font-weight-heavy);
