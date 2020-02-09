@@ -7,6 +7,30 @@
         <div v-for="(color, index) in category.colors" :key="index" class="color-chart__item" :class="'color-chart__item--' + color.class" @click="clickToCopy(color)">{{ color.name }}<span v-if="copiedVariable !== color" class="body--xs color-chart__variable"><br/>{{ color.variable }}</span><span v-if="copiedVariable === color" class="body--xs"><br/>Copied!!</span></div>
       </section>
     </figure>
+    <article id="themes">
+      <h2 class="heading--m">Themes</h2>
+      <p class="body--m">Domelo offers a choice of two themes, light and dark, for user interfaces. Offering a light and dark theme will cover a good ground base of users. The user should be able to switch between themes whenever they please based on their preference and the application should remember or save their latest chosen theme.</p>
+      <p class="body--m">To accomplish theming, Domelo uses design tokens to double abstract the theme specific colors from the CSS that makes the component. This is done using CSS variables.</p>
+      <ul>
+        <li>Light theme (default): <code class="code--m">&lt;html&gt;</code> - <i>No class</i> </li>
+        <li>Dark theme: <code class="code--m">&lt;html class="theme--dark"&gt;</code></li>
+      </ul>
+    </article>
+    <article id="greys">
+      <h2 class="heading--m">Greys</h2>
+      <p class="body--m">Domelo uses 11 shades of grey, which are different between the light and dark themes. The greys are neutral (the red, blue and green ratios are equal) meaning they work well alongside any brand colors and ensures they don't distract the user's attention from the main workflow.</p>
+      <p class="body--m">The greys have the same CSS variable names across both themes, which allows us to define specific behaviours for each grey:</p>
+      <ul>
+        <li class="greys--grey-900">Grey 900: High contrast text content</li>
+        <li class="greys--grey-800">Grey 800: Medium contrast text content</li>
+        <li class="greys--grey-700">Grey 700: Low contrast text content</li>
+        <li class="greys--grey-600">Grey 600: Placeholder text</li>
+        <li class="greys--grey-500">Grey 500: Disabled text</li>
+        <li class="greys--grey-100">Grey 100: Base background</li>
+        <li class="greys--grey-75">Grey 75: High alternate background</li>
+        <li class="greys--grey-50">Grey 50: Low alternate background</li>
+      </ul>
+    </article>
   </page>
 </template>
 
@@ -379,6 +403,40 @@ export default class Color extends Vue {
     &--green-700 {
       color: rgba(var(--text-content-high-color-revere), 1);
     }
+  }
+}
+
+.greys {
+  &--grey-900 {
+    color: rgba(var(--grey-900), 1);
+  }
+
+  &--grey-800 {
+    color: rgba(var(--grey-800), 1);
+  }
+
+  &--grey-700 {
+    color: rgba(var(--grey-700), 1);
+  }
+
+  &--grey-600 {
+    color: rgba(var(--grey-600), 1);
+  }
+
+  &--grey-500 {
+    color: rgba(var(--grey-500), 1);
+  }
+
+  &--grey-100 {
+    background-color: rgba(var(--grey-100), 1);
+  }
+
+  &--grey-75 {
+    background-color: rgba(var(--grey-75), 1);
+  }
+
+  &--grey-50 {
+    background-color: rgba(var(--grey-50), 1);
   }
 }
 </style>
