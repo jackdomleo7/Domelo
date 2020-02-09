@@ -3,7 +3,7 @@
     <template #pageTitle>Color</template>
     <template #pageDescription>Domelo colors are designed to be clear and accessible. There are two themes available, light and dark. Each theme consists of a range of greys and semantic colors.</template>
     <figure class="color-chart body--s">
-      <section v-for="(category, index) in colors" :key="index" class="color-chart__section">
+      <section v-for="(category, index) in colors" :key="index" :id="category.id" class="color-chart__section">
         <div v-for="(color, index) in category.colors" :key="index" class="color-chart__item" :class="'color-chart__item--' + color.class" @click="clickToCopy(color)">{{ color.name }}<span v-if="copiedVariable !== color" class="body--xs color-chart__variable"><br/>{{ color.variable }}</span><span v-if="copiedVariable === color" class="body--xs"><br/>Copied!!</span></div>
       </section>
     </figure>
@@ -18,10 +18,10 @@
     </article>
     <article id="greys">
       <h2 class="heading--m">Greys</h2>
-      <p class="body--m">Domelo uses 11 shades of grey, which are different between the light and dark themes. The greys are neutral (the red, blue and green ratios are equal) meaning they work well alongside any brand colors and ensures they don't distract the user's attention from the main workflow.</p>
+      <p class="body--m">Domelo uses <a href="#greys">11 shades of grey</a>, which are different between the light and dark themes. The greys are neutral (the red, blue and green ratios are equal) meaning they work well alongside any brand colors and ensures they don't distract the user's attention from the main workflow.</p>
       <p class="body--m">The greys have the same CSS variable names across both themes, which allows us to define specific behaviours for each grey:</p>
       <ul>
-        <li class="greys--grey-900">Grey 900: High contrast text content</li>
+        <li class="greys--grey-900">Grey 900: High contrast text content (default text color)</li>
         <li class="greys--grey-800">Grey 800: Medium contrast text content</li>
         <li class="greys--grey-700">Grey 700: Low contrast text content</li>
         <li class="greys--grey-600">Grey 600: Placeholder text</li>
@@ -46,6 +46,7 @@ export interface IColor {
 }
 
 export interface IColors {
+  id: string;
   colors: IColor[];
 }
 
@@ -57,6 +58,7 @@ export default class Color extends Vue {
 
   private readonly colors: IColors[] = [
     {
+      id: 'white-black',
       colors: [
         {
           name: 'Static white',
@@ -67,9 +69,10 @@ export default class Color extends Vue {
           class: 'black',
           variable: '--static-black',
         },
-      ],
+      ] as IColor[],
     },
     {
+      id: 'greys',
       colors: [
         {
           name: 'Grey 50',
@@ -116,9 +119,10 @@ export default class Color extends Vue {
           class: 'grey-900',
           variable: '--grey-900',
         },
-      ],
+      ] as IColor[],
     },
     {
+      id: 'blue',
       colors: [
         {
           name: 'Blue 400',
@@ -137,9 +141,10 @@ export default class Color extends Vue {
           class: 'blue-700',
           variable: '--blue-700',
         },
-      ],
+      ] as IColor[],
     },
     {
+      id: 'red',
       colors: [
         {
           name: 'Red 400',
@@ -158,9 +163,10 @@ export default class Color extends Vue {
           class: 'red-700',
           variable: '--red-700',
         },
-      ],
+      ] as IColor[],
     },
     {
+      id: 'orange',
       colors: [
         {
           name: 'Orange 400',
@@ -179,9 +185,10 @@ export default class Color extends Vue {
           class: 'orange-700',
           variable: '--orange-700',
         },
-      ],
+      ] as IColor[],
     },
     {
+      id: 'green',
       colors: [
         {
           name: 'Green 400',
@@ -200,7 +207,7 @@ export default class Color extends Vue {
           class: 'green-700',
           variable: '--green-700',
         },
-      ],
+      ] as IColor[],
     },
   ];
 
