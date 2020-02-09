@@ -7,35 +7,79 @@
 }
 
 .heading {
+  &--xl {
+    @include heading(var(--font-size-800));
+  }
+
   &--l {
-    @include heading(var(--font-size-500));
+    @include heading(var(--font-size-700));
   }
 
   &--m {
-    @include heading(var(--font-size-400));
+    @include heading(var(--font-size-600));
   }
 
   &--s {
-    @include heading(var(--font-size-300));
+    @include heading(var(--font-size-500));
+  }
+
+  &--xs {
+    @include heading(var(--font-size-400));
   }
 
   &--subheading {
-    @include heading(var(--font-size-100));
+    @include heading(var(--font-size-200));
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .heading {
+    &--xl {
+      @include heading(var(--font-size-1100));
+    }
+
+    &--l {
+      @include heading(var(--font-size-1000));
+    }
+
+    &--m {
+      @include heading(var(--font-size-900));
+    }
+
+    &--s {
+      @include heading(var(--font-size-800));
+    }
+
+    &--xs {
+      @include heading(var(--font-size-700));
+    }
+
+    &--subheading {
+      @include heading(var(--font-size-400));
+    }
   }
 }
 
 h1 {
-  @extend .heading--l;
+  @extend .heading--xl;
 }
 
 h2 {
-  @extend .heading--m;
+  @extend .heading--l;
 }
 
 h3 {
-  @extend .heading--s;
+  @extend .heading--m;
 }
 
 h4 {
+  @extend .heading--s;
+}
+
+h5 {
+  @extend .heading--xs;
+}
+
+h6 {
   @extend .heading--subheading;
 }

@@ -22,6 +22,10 @@
   &--l {
     @include code(var(--font-size-200));
   }
+
+  &--xl {
+    @include code(var(--font-size-300));
+  }
 }
 
 code {

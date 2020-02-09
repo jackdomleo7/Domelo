@@ -21,6 +21,10 @@
   &--l {
     @include body(var(--font-size-200));
   }
+
+  &--xl {
+    @include body(var(--font-size-300));
+  }
 }
 
 p {

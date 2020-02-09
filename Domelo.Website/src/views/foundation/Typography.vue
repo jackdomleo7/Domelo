@@ -3,7 +3,7 @@
     <template #pageTitle>Typography</template>
     <template #pageDescription>Clear typography rules are important to a design system to give a sense of consistency, efficiency and clear presentation.</template>
     <article id="typefaces">
-      <h2 class="heading--m">Typefaces</h2>
+      <h2 class="heading--l">Typefaces</h2>
       <p class="body--m">Domelo uses the typefaces Open Sans as the sans-serif font and Courier New as the monospace font. It is important to apply a font stack with fallback fonts to the application:</p>
       <ul>
         <li>Open Sans: <code class="code--m">font-family: "Open Sans", Verdana, Arial, sans-serif;</code></li>
@@ -11,29 +11,29 @@
       </ul>
     </article>
     <article id="sizes">
-      <h2 class="heading--m">Font sizes</h2>
-      <p class="body--m">All Domelo font sizes are identified in pixels for easy identification, but should be defined in the CSS as rems. Rems can be calculated using the following calculation: <span class="code--m">rem = px / 16</span></p>
+      <h2 class="heading--l">Font sizes</h2>
+      <p class="body--m">All Domelo font sizes are identified in pixels for easy identification, but should be defined in the CSS as rems. Rems can be calculated using the following calculation: <span class="code--m">rem = px / 16</span>. Domelo scales font sizes for mobile and desktop, rendering the font size larger on mobile for easier reading.</p>
       <table class="table body--m">
         <thead class="table__header body--s">
         <tr class="table__row">
           <th>Name</th>
           <th>Variable</th>
-          <th>Pixels</th>
-          <th>Rems</th>
+          <th>Desktop</th>
+          <th>Mobile</th>
         </tr>
         </thead>
         <tbody>
         <tr v-for="(size, index) in fontSizes" :key="index" class="table__row">
           <td class="body--m">{{ size.name }}</td>
           <td class="body--m"><code v-if="copiedVariable !== size.variable" class="table__copy code--m" @click="copyToClipboard(size.variable)" @keydown.enter="copyToClipboard(size.variable)" tabindex="0">{{ size.variable }}</code><span v-if="copiedVariable === size.variable">Copied!!</span></td>
-          <td class="code--m">{{ size.pixels }}px</td>
-          <td class="code--m">{{ pxToRem(size.pixels) }}rem</td>
+          <td class="code--m">{{ size.desktop }}<span aria-label="pixels">px</span> / {{ pxToRem(size.desktop) }}rem</td>
+          <td class="code--m">{{ size.mobile }}<span aria-label="pixels">px</span> / {{ pxToRem(size.mobile) }}rem</td>
         </tr>
         </tbody>
       </table>
     </article>
     <article id="weights">
-      <h2 class="heading--m">Font weights</h2>
+      <h2 class="heading--l">Font weights</h2>
       <p class="body--m">Domelo uses three font weights, <span class="weight--light">light</span> (<code class="code--m">font-weight: 300;</code>), <span class="weight--medium">medium</span> (<code class="code--m">font-weight: 400;</code>) and <span class="weight--heavy">heavy</span> (<code class="code--m">font-weight: 400;</code>).</p>
       <table class="table">
         <thead class="table__header body--s">
@@ -55,21 +55,25 @@
       </table>
     </article>
     <article id="headings">
-      <h2 class="heading--m">Headings</h2>
+      <h2 class="heading--l">Headings</h2>
+      <p class="heading--xl">Heading--xl</p>
       <p class="heading--l">Heading--l</p>
       <p class="heading--m">Heading--m</p>
       <p class="heading--s">Heading--s</p>
       <p class="heading--xs">Heading--xs</p>
+      <p class="heading--subheading">Heading--subheading</p>
     </article>
     <article id="body">
-      <h2 class="heading--m">Body</h2>
+      <h2 class="heading--l">Body</h2>
+      <p class="body--xl">Body--xl</p>
       <p class="body--l">Body--l</p>
       <p class="body--m">Body--m</p>
       <p class="body--s">Body--s</p>
       <p class="body--xs">Body--xs</p>
     </article>
     <article id="code">
-      <h2 class="heading--m">Code</h2>
+      <h2 class="heading--l">Code</h2>
+      <p class="code--xl">Code--xl</p>
       <p class="code--l">Code--l</p>
       <p class="code--m">Code--m</p>
       <p class="code--s">Code--s</p>
@@ -86,7 +90,8 @@ import copy from 'copy-to-clipboard';
 export interface IFontSize {
   name: string;
   variable: string;
-  pixels: number;
+  desktop: number;
+  mobile: number;
 }
 
 export interface IFontWeight {
@@ -106,31 +111,68 @@ export default class Typography extends Vue {
     {
       name: 'Font size 50',
       variable: '--font-size-50',
-      pixels: 11,
+      desktop: 11,
+      mobile: 13,
     }, {
       name: 'Font size 75',
       variable: '--font-size-75',
-      pixels: 14,
+      desktop: 12,
+      mobile: 15,
     }, {
       name: 'Font size 100',
       variable: '--font-size-100',
-      pixels: 16,
+      desktop: 14,
+      mobile: 17,
     }, {
       name: 'Font size 200',
       variable: '--font-size-200',
-      pixels: 20,
+      desktop: 16,
+      mobile: 19,
     }, {
       name: 'Font size 300',
       variable: '--font-size-300',
-      pixels: 28,
+      desktop: 18,
+      mobile: 22,
     }, {
       name: 'Font size 400',
       variable: '--font-size-400',
-      pixels: 36,
+      desktop: 20,
+      mobile: 24,
     }, {
       name: 'Font size 500',
       variable: '--font-size-500',
-      pixels: 44,
+      desktop: 22,
+      mobile: 27,
+    }, {
+      name: 'Font size 600',
+      variable: '--font-size-600',
+      desktop: 25,
+      mobile: 31,
+    }, {
+      name: 'Font size 700',
+      variable: '--font-size-700',
+      desktop: 28,
+      mobile: 34,
+    }, {
+      name: 'Font size 800',
+      variable: '--font-size-800',
+      desktop: 32,
+      mobile: 39,
+    }, {
+      name: 'Font size 900',
+      variable: '--font-size-900',
+      desktop: 36,
+      mobile: 44,
+    }, {
+      name: 'Font size 1000',
+      variable: '--font-size-1000',
+      desktop: 40,
+      mobile: 49,
+    }, {
+      name: 'Font size 1100',
+      variable: '--font-size-1100',
+      desktop: 45,
+      mobile: 55,
     },
   ];
 

@@ -1,6 +1,6 @@
 <template>
   <main class="page">
-    <h1 class="heading--l page__heading">
+    <h1 class="heading--xl page__heading">
       <slot name="pageTitle" />
     </h1>
     <p class="body--l weight--light">
