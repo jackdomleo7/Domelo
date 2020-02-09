@@ -3,3 +3,15 @@
   --font-weight-medium: 400;
   --font-weight-heavy: 600;
 }
+
+.weight--heavy {
+  font-weight: var(--font-weight-heavy);
+}
+
+.weight--medium {
+  font-weight: var(--font-weight-medium);
+}
+
+.weight--light {
+  font-weight: var(--font-weight-light);
+}
