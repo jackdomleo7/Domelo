@@ -207,7 +207,7 @@ export default class Color extends Vue {
   &__variable {
     visibility: hidden;
     opacity: 0;
-    transition: 160ms opacity ease-in-out, 160ms visibility ease-in-out;
+    transition: var(--transition-timing) opacity ease-in-out, var(--transition-timing) visibility ease-in-out;
   }
 
   &__item {
@@ -216,7 +216,7 @@ export default class Color extends Vue {
     width: 12rem;
     margin: 0 auto;
     padding: 0.5rem;
-    transition: 160ms transform ease-in-out, 160ms box-shadow ease-in-out;
+    transition: var(--transition-timing) transform ease-in-out, var(--transition-timing) box-shadow ease-in-out;
     font-weight: var(--font-weight-heavy);
 
     &:hover {
