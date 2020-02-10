@@ -305,6 +305,7 @@ export default class Color extends Vue {
   }
 
   &__item {
+    border-radius: var(--default-rounding);
     cursor: pointer;
     font-weight: var(--font-weight-heavy);
     height: 6rem;

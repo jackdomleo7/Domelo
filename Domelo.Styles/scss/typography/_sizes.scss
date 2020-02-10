@@ -44,7 +44,7 @@ $d-font-size-1100: pxtorem(45px);
   --font-size-1000: #{$font-size-1000};
   --font-size-1100: #{$font-size-1100};
 
-  @media screen and (min-width: $scale-desktop) {
+  @media screen and (min-width: $desktop-width) {
     --font-size-50: #{$d-font-size-50};
     --font-size-75: #{$d-font-size-75};
     --font-size-100: #{$d-font-size-100};

@@ -1,0 +1,35 @@
+@import "../functions";
+@import "../scale/scale";
+
+$default-rounding: pxtorem(5px);
+$small-rounding: pxtorem(3px);
+
+:root {
+  --default-rounding: #{$default-rounding};
+  --small-rounding: #{$small-rounding};
+  --no-rounding: 0;
+  --full-rounding: 50%;
+
+  @media screen and (min-width: $desktop-width) {
+    --default-rounding: calc(#{$default-rounding} * var(--desktop-scale-proportions));
+    --small-rounding: calc(#{$small-rounding} * var(--desktop-scale-proportions));
+  }
+}
+
+.rounding {
+  &--default {
+    border-radius: var(--default-rounding);
+  }
+
+  &--small {
+    border-radius: var(--small-rounding);
+  }
+
+  &--none {
+    border-radius: var(--no-rounding);
+  }
+
+  &--full {
+    border-radius: var(--full-rounding);
+  }
+}

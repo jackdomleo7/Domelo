@@ -1,8 +1,8 @@
 @import "../functions";
 
-$scale-mobile-px: 768px;
-$scale-mobile: pxtoem($scale-mobile-px);
-$scale-desktop: pxtoem($scale-mobile-px + 1px);
+$mobile-width-px: 768px;
+$mobile-width: pxtoem($mobile-width-px);
+$desktop-width: pxtoem($mobile-width-px + 1px);
 
 :root {
   --desktop-scale-proportions: 0.8;

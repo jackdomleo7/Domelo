@@ -34,7 +34,7 @@
   }
 }
 
-@media screen and (min-width: $scale-desktop) {
+@media screen and (min-width: $desktop-width) {
   .heading {
     &--xl {
       @include heading(var(--font-size-1100));
