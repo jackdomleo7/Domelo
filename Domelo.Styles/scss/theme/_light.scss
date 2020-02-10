@@ -1,31 +1,31 @@
 :root {
-  --grey-50: var(--static-white);
-  --grey-75: 250, 250, 250;
-  --grey-100: 245, 245, 245;
-  --grey-200: 234, 234, 234;
-  --grey-300: 225, 225, 225;
-  --grey-400: 202, 202, 202;
-  --grey-500: 179, 179, 179;
-  --grey-600: 142, 142, 142;
-  --grey-700: 110, 110, 110;
-  --grey-800: 75, 75, 75;
-  --grey-900: 44, 44, 44;
+  --grey-50: var(--color-theme-light-grey-50);
+  --grey-75: var(--color-theme-light-grey-75);
+  --grey-100: var(--color-theme-light-grey-100);
+  --grey-200: var(--color-theme-light-grey-200);
+  --grey-300: var(--color-theme-light-grey-300);
+  --grey-400: var(--color-theme-light-grey-400);
+  --grey-500: var(--color-theme-light-grey-500);
+  --grey-600: var(--color-theme-light-grey-600);
+  --grey-700: var(--color-theme-light-grey-700);
+  --grey-800: var(--color-theme-light-grey-800);
+  --grey-900: var(--color-theme-light-grey-900);
 
-  --blue-500: 20, 115, 230;
-  --blue-600: 13, 102, 208;
-  --blue-700: 9, 90, 186;
+  --blue-500: var(--color-theme-light-blue-500);
+  --blue-600: var(--color-theme-light-blue-600);
+  --blue-700: var(--color-theme-light-blue-700);
 
-  --red-500: 215, 55, 63;
-  --red-600: 201, 37, 45;
-  --red-700: 187, 18, 26;
+  --red-500: var(--color-theme-light-red-500);
+  --red-600: var(--color-theme-light-red-600);
+  --red-700: var(--color-theme-light-red-700);
 
-  --orange-500: 218, 123, 17;
-  --orange-600: 203, 111, 16;
-  --orange-700: 189, 100, 13;
+  --orange-500: var(--color-theme-light-orange-500);
+  --orange-600: var(--color-theme-light-orange-600);
+  --orange-700: var(--color-theme-light-orange-700);
 
-  --green-500: 38, 142, 108;
-  --green-600: 18, 128, 92;
-  --green-700: 16, 113, 84;
+  --green-500: var(--color-theme-light-green-500);
+  --green-600: var(--color-theme-light-green-600);
+  --green-700: var(--color-theme-light-green-700);
 
-  --box-shadow: 0 1px 4px rgba(var(--static-black), 0.15);
+  --box-shadow: 0 1px 4px rgba(var(--color-static-black), 0.15);
 }
