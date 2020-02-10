@@ -7,13 +7,6 @@
         <div v-for="(color, index) in category.colors" :key="index" class="color-chart__item" :class="'color-chart__item--' + color.class" @click="clickToCopy(color)">{{ color.name }}<code v-if="copiedVariable !== color" class="code--xs color-chart__variable"><br/>{{ color.variable }}</code><span v-if="copiedVariable === color" class="body--xs"><br/>Copied!!</span></div>
       </section>
     </figure>
-    <article id="css-variables">
-      <h2 class="heading--l">CSS variables</h2>
-      <p class="body--m">The CSS for the colors <a href="#color-chart">above</a> are not stored as a recognisable color value; hexadecimal or rgb. Instead they are stored as three positive numbered values separated by a comma; the first value is the amount of red, the second value is the amount of green and the third value is the amount of blue. They are stored very similar to rgb, however without the <code class="code--m">rgb()</code> syntax.</p>
-      <p class="body--m">The CSS variable for static white is <code class="code--m">--static-white: 255, 255, 255;</code>.</p>
-      <p class="body--m">So, to use this in your CSS, simply do <code class="code--m">rgba(var(--static-white), 1)</code>, which is the same as <code class="code--m">rgba(255, 255, 255, 1)</code>.</p>
-      <p class="body--m"><em>NOTE:</em> CSS variables done in this way <em>DO NOT</em> work with the CSS <code class="code--m">rgb()</code> property, it only works with the <code class="code--m">rgba()</code> property. The <code class="code--m">rgba()</code> property allows flexibility with the alpha channel/opaqueness of a color, however this should be done carefully.</p>
-    </article>
     <article id="themes">
       <h2 class="heading--l">Themes</h2>
       <p class="body--m">Domelo offers a choice of two themes, light and dark, for user interfaces. Offering a light and dark theme will cover a good ground base of users. The user should be able to switch between themes whenever they please based on their preference and the application should remember or save their latest chosen theme.</p>
@@ -116,11 +109,11 @@ export default class Color extends Vue {
         {
           name: 'Static white',
           class: 'white',
-          variable: '--static-white',
+          variable: '--color-static-white',
         }, {
           name: 'Static black',
           class: 'black',
-          variable: '--static-black',
+          variable: '--color-static-black',
         },
       ] as IColor[],
     },
@@ -180,7 +173,7 @@ export default class Color extends Vue {
         {
           name: 'Static blue 400',
           class: 'blue-400',
-          variable: '--static-blue-400',
+          variable: '--color-static-blue-400',
         }, {
           name: 'Blue 500',
           class: 'blue-500',
@@ -202,7 +195,7 @@ export default class Color extends Vue {
         {
           name: 'Static red 400',
           class: 'red-400',
-          variable: '--static-red-400',
+          variable: '--color-static-red-400',
         }, {
           name: 'Red 500',
           class: 'red-500',
@@ -224,7 +217,7 @@ export default class Color extends Vue {
         {
           name: 'Static orange 400',
           class: 'orange-400',
-          variable: '--static-orange-400',
+          variable: '--color-static-orange-400',
         }, {
           name: 'Orange 500',
           class: 'orange-500',
@@ -246,7 +239,7 @@ export default class Color extends Vue {
         {
           name: 'Static green 400',
           class: 'green-400',
-          variable: '--static-green-400',
+          variable: '--color-static-green-400',
         }, {
           name: 'Green 500',
           class: 'green-500',
@@ -325,121 +318,121 @@ export default class Color extends Vue {
     }
 
     &--white {
-      background-color: rgba(var(--static-white), 1);
-      color: rgba(var(--static-black), 1);
+      background-color: var(--color-static-white);
+      color: var(--color-static-black);
     }
 
     &--black {
-      background-color: rgba(var(--static-black), 1);
-      color: rgba(var(--static-white), 1);
+      background-color: var(--color-static-black);
+      color: var(--color-static-white);
     }
 
     &--grey-50 {
-      background-color: rgba(var(--grey-50), 1);
+      background-color: var(--grey-50);
     }
 
     &--grey-75 {
-      background-color: rgba(var(--grey-75), 1);
+      background-color: var(--grey-75);
     }
 
     &--grey-100 {
-      background-color: rgba(var(--grey-100), 1);
+      background-color: var(--grey-100);
     }
 
     &--grey-200 {
-      background-color: rgba(var(--grey-200), 1);
+      background-color: var(--grey-200);
     }
 
     &--grey-300 {
-      background-color: rgba(var(--grey-300), 1);
+      background-color: var(--grey-300);
     }
 
     &--grey-400 {
-      background-color: rgba(var(--grey-400), 1);
+      background-color: var(--grey-400);
     }
 
     &--grey-500 {
-      background-color: rgba(var(--grey-500), 1);
+      background-color: var(--grey-500);
     }
 
     &--grey-600 {
-      background-color: rgba(var(--grey-600), 1);
+      background-color: var(--grey-600);
     }
 
     &--grey-700 {
-      background-color: rgba(var(--grey-700), 1);
+      background-color: var(--grey-700);
     }
 
     &--grey-800 {
-      background-color: rgba(var(--grey-800), 1);
+      background-color: var(--grey-800);
     }
 
     &--grey-900 {
-      background-color: rgba(var(--grey-900), 1);
+      background-color: var(--grey-900);
     }
 
     &--blue-400 {
-      background-color: rgba(var(--static-blue-400), 1);
+      background-color: var(--color-static-blue-400);
     }
 
     &--blue-500 {
-      background-color: rgba(var(--blue-500), 1);
+      background-color: var(--blue-500);
     }
 
     &--blue-600 {
-      background-color: rgba(var(--blue-600), 1);
+      background-color: var(--blue-600);
     }
 
     &--blue-700 {
-      background-color: rgba(var(--blue-700), 1);
+      background-color: var(--blue-700);
     }
 
     &--red-400 {
-      background-color: rgba(var(--static-red-400), 1);
+      background-color: var(--color-static-red-400);
     }
 
     &--red-500 {
-      background-color: rgba(var(--red-500), 1);
+      background-color: var(--red-500);
     }
 
     &--red-600 {
-      background-color: rgba(var(--red-600), 1);
+      background-color: var(--red-600);
     }
 
     &--red-700 {
-      background-color: rgba(var(--red-700), 1);
+      background-color: var(--red-700);
     }
 
     &--orange-400 {
-      background-color: rgba(var(--static-orange-400), 1);
+      background-color: var(--color-static-orange-400);
     }
 
     &--orange-500 {
-      background-color: rgba(var(--orange-500), 1);
+      background-color: var(--orange-500);
     }
 
     &--orange-600 {
-      background-color: rgba(var(--orange-600), 1);
+      background-color: var(--orange-600);
     }
 
     &--orange-700 {
-      background-color: rgba(var(--orange-700), 1);
+      background-color: var(--orange-700);
     }
 
     &--green-400 {
-      background-color: rgba(var(--static-green-400), 1);
+      background-color: var(--color-static-green-400);
     }
 
     &--green-500 {
-      background-color: rgba(var(--green-500), 1);
+      background-color: var(--green-500);
     }
 
     &--green-600 {
-      background-color: rgba(var(--green-600), 1);
+      background-color: var(--green-600);
     }
 
     &--green-700 {
-      background-color: rgba(var(--green-700), 1);
+      background-color: var(--green-700);
     }
 
     &--grey-600,
@@ -462,42 +455,42 @@ export default class Color extends Vue {
     &--green-500,
     &--green-600,
     &--green-700 {
-      color: rgba(var(--text-content-high-color-revere), 1);
+      color: var(--text-content-high-color-revere);
     }
   }
 }
 
 .greys {
   &--grey-900 {
-    color: rgba(var(--grey-900), 1);
+    color: var(--grey-900);
   }
 
   &--grey-800 {
-    color: rgba(var(--grey-800), 1);
+    color: var(--grey-800);
   }
 
   &--grey-700 {
-    color: rgba(var(--grey-700), 1);
+    color: var(--grey-700);
   }
 
   &--grey-600 {
-    color: rgba(var(--grey-600), 1);
+    color: var(--grey-600);
   }
 
   &--grey-500 {
-    color: rgba(var(--grey-500), 1);
+    color: var(--grey-500);
   }
 
   &--grey-100 {
-    background-color: rgba(var(--grey-100), 1);
+    background-color: var(--grey-100);
   }
 
   &--grey-75 {
-    background-color: rgba(var(--grey-75), 1);
+    background-color: var(--grey-75);
   }
 
   &--grey-50 {
-    background-color: rgba(var(--grey-50), 1);
+    background-color: var(--grey-50);
   }
 }
 
@@ -531,67 +524,67 @@ export default class Color extends Vue {
   }
 
   &--blue-400 {
-    background-color: rgba(var(--static-blue-400), 1);
+    background-color: var(--color-static-blue-400);
   }
 
   &--blue-500 {
-    background-color: rgba(var(--blue-500), 1);
+    background-color: var(--blue-500);
   }
 
   &--blue-600 {
-    background-color: rgba(var(--blue-600), 1);
+    background-color: var(--blue-600);
   }
 
   &--blue-700 {
-    background-color: rgba(var(--blue-700), 1);
+    background-color: var(--blue-700);
   }
 
   &--red-400 {
-    background-color: rgba(var(--static-red-400), 1);
+    background-color: var(--color-static-red-400);
   }
 
   &--red-500 {
-    background-color: rgba(var(--red-500), 1);
+    background-color: var(--red-500);
   }
 
   &--red-600 {
-    background-color: rgba(var(--red-600), 1);
+    background-color: var(--red-600);
   }
 
   &--red-700 {
-    background-color: rgba(var(--red-700), 1);
+    background-color: var(--red-700);
   }
 
   &--orange-400 {
-    background-color: rgba(var(--static-orange-400), 1);
+    background-color: var(--color-static-orange-400);
   }
 
   &--orange-500 {
-    background-color: rgba(var(--orange-500), 1);
+    background-color: var(--orange-500);
   }
 
   &--orange-600 {
-    background-color: rgba(var(--orange-600), 1);
+    background-color: var(--orange-600);
   }
 
   &--orange-700 {
-    background-color: rgba(var(--orange-700), 1);
+    background-color: var(--orange-700);
   }
 
   &--green-400 {
-    background-color: rgba(var(--static-green-400), 1);
+    background-color: var(--color-static-green-400);
   }
 
   &--green-500 {
-    background-color: rgba(var(--green-500), 1);
+    background-color: var(--green-500);
   }
 
   &--green-600 {
-    background-color: rgba(var(--green-600), 1);
+    background-color: var(--green-600);
   }
 
   &--green-700 {
-    background-color: rgba(var(--green-700), 1);
+    background-color: var(--green-700);
   }
 }
 </style>
