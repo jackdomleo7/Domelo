@@ -1,0 +1,14 @@
+{
+  "ColorBaseGrayLight": "#212121",
+  "ColorBaseGrayMedium": "#999999",
+  "ColorBaseGrayDark": "#111111",
+  "ColorBaseRed": "#ff0000",
+  "ColorBaseGreen": "#00ff00",
+  "ColorFontBase": "#ff0000",
+  "ColorFontSecondary": "#00ff00",
+  "ColorFontTertiary": "#212121",
+  "SizeFontSmall": "0.75rem",
+  "SizeFontMedium": "1rem",
+  "SizeFontLarge": "20rem",
+  "SizeFontBase": "1rem"
+}
