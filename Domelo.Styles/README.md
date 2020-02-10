@@ -10,6 +10,6 @@ Stylelint is our linter. See [stylelint config](.stylelintrc).
 
 ---
 
-## [style-dictionary](https://amzn.github.io/style-dictionary/#/)
+## [Style Dictionary](https://amzn.github.io/style-dictionary/#/)
 
-Style-dictionary creates our design tokens from JSON files. See [style-dictionary config](design-token-config.json).
+Style Dictionary creates our design tokens from JSON files. See [style-dictionary config](design-token-config.json).
