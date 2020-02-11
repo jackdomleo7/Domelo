@@ -1,8 +1,7 @@
-@import "../functions";
 @import "../scale/scale";
 
-$default-rounding: pxtorem(5px);
-$small-rounding: pxtorem(3px);
+$default-rounding: 0.3125rem;
+$small-rounding: 0.1875rem;
 
 :root {
   --default-rounding: #{$default-rounding};
@@ -11,8 +10,8 @@ $small-rounding: pxtorem(3px);
   --full-rounding: 50%;
 
   @media screen and (min-width: $desktop-width) {
-    --default-rounding: calc(#{$default-rounding} * var(--desktop-scale-proportions));
-    --small-rounding: calc(#{$small-rounding} * var(--desktop-scale-proportions));
+    --default-rounding: calc(#{$default-rounding} * var(--scale-mobile-to-desktop-proportion));
+    --small-rounding: calc(#{$small-rounding} * var(--scale-mobile-to-desktop-proportion));
   }
 }
 
