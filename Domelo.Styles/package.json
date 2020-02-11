@@ -5,7 +5,7 @@
   "scripts": {
     "stylelint": "stylelint \"**/*.scss\"",
     "stylelint:fix": "stylelint \"**/*.scss\" --fix",
-    "design-tokens": "style-dictionary clean --config ./design-token-config.json && style-dictionary build --config ./design-token-config.json"
+    "design-tokens": "style-dictionary clean --config ./styledictionary.config.json && style-dictionary build --config ./styledictionary.config.json"
   },
   "repository": {
     "type": "git",
