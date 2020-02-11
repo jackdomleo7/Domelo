@@ -1,9 +1,11 @@
-@import "../functions";
+@import "../tokens";
 
 $mobile-width-px: 768px;
 $mobile-width: pxtoem($mobile-width-px);
-$desktop-width: pxtoem($mobile-width-px + 1px);
+$desktop-width: map-get($tokens, "scale-desktop");
 
 :root {
-  --desktop-scale-proportions: 0.8;
+  --scale-mobile-max-width: #{map-get($tokens, "scale-mobile-max-width")};
+  --scale-desktop-min-width: #{map-get($tokens, "scale-desktop-min-width")};
+  --scale-mobile-to-desktop-proportion: #{map-get($tokens, "scale-mobile-to-desktop-proportion")};
 }

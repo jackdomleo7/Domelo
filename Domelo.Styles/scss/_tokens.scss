@@ -1,7 +1,7 @@
 
 /*
   Do not edit directly
-  Generated on Tue, 11 Feb 2020 22:10:08 GMT
+  Generated on Tue, 11 Feb 2020 23:09:13 GMT
 */
 
 $tokens: (
@@ -57,33 +57,39 @@ $tokens: (
   'color-theme-dark-green-500': #33ab84,
   'color-theme-dark-green-600': #39b990,
   'color-theme-dark-green-700': #3fc89c,
-  // 13px
+  // Mobile font size: 13px
   'font-size-50': 0.8125rem,
-  // 15px
+  // Mobile font size: 15px
   'font-size-75': 0.9375rem,
-  // 17px
+  // Mobile font size: 17px
   'font-size-100': 1.0625rem,
-  // 19px
+  // Mobile font size: 19px
   'font-size-200': 1.1875rem,
-  // 22px
+  // Mobile font size: 22px
   'font-size-300': 1.375rem,
-  // 24px
+  // Mobile font size: 24px
   'font-size-400': 1.5rem,
-  // 27px
+  // Mobile font size: 27px
   'font-size-500': 1.6875rem,
-  // 31px
+  // Mobile font size: 31px
   'font-size-600': 1.9375rem,
-  // 34px
+  // Mobile font size: 34px
   'font-size-700': 2.125rem,
-  // 39px
+  // Mobile font size: 39px
   'font-size-800': 2.4375rem,
-  // 44px
+  // Mobile font size: 44px
   'font-size-900': 2.75rem,
-  // 49px
+  // Mobile font size: 49px
   'font-size-1000': 3.0625rem,
-  // 55px
+  // Mobile font size: 55px
   'font-size-1100': 3.4375rem,
   'font-weight-light': 300,
   'font-weight-medium': 400,
-  'font-weight-heavy': 600
+  'font-weight-heavy': 600,
+  // Max screen width of 768px
+  'scale-mobile-max-width': 48em,
+  // Desktop components are 80% the size of its mobile counterpart
+  'scale-mobile-to-desktop-proportion': 0.8,
+  //  Min screen width of (Max screen width of 768px + 1px)
+  'scale-desktop-min-width': 48em + 0.0625em
 );
