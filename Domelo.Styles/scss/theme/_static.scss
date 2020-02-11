@@ -1,0 +1,10 @@
+@import "../tokens";
+
+:root {
+  --color-static-white: #{map-get($tokens, "color-static-white")};
+  --color-static-black: #{map-get($tokens, "color-static-black")};
+  --color-static-blue-400: #{map-get($tokens, "color-static-blue-400")};
+  --color-static-red-400: #{map-get($tokens, "color-static-red-400")};
+  --color-static-orange-400: #{map-get($tokens, "color-static-orange-400")};
+  --color-static-green-400: #{map-get($tokens, "color-static-green-400")};
+}
