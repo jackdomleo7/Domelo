@@ -8,7 +8,7 @@
           </router-link>
           <p>A design system by <a href="https://jackdomleo.dev" target="_blank">Jack Domleo</a></p>
         </div>
-        <button @click="toggleTheme">Toggle theme</button>
+        <button class="button" @click="toggleTheme">Toggle theme</button>
         <nav class="sidebar__navigation">
           <ul role="tree">
             <li>
@@ -37,6 +37,14 @@
                 </li>
                 <li>
                   <router-link :to="{ name: Routes.FoundationGrid }">Grid</router-link>
+                </li>
+              </ul>
+            </li>
+            <li>
+              Components
+              <ul role="group">
+                <li>
+                  <router-link :to="{ name: Routes.ComponentsButtons }">Buttons</router-link>
                 </li>
               </ul>
             </li>

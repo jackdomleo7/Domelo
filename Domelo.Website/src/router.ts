@@ -12,6 +12,7 @@ export class Routes {
   public static readonly FoundationPlatformScale: string = 'foundation-platform-scale';
   public static readonly FoundationResetStylesheet: string = 'foundation-reset-stylesheet';
   public static readonly FoundationTypography: string = 'foundation-typography';
+  public static readonly ComponentsButtons: string = 'components-buttons';
 }
 
 const routes = [
@@ -54,6 +55,11 @@ const routes = [
     path: '/foundation/typography',
     name: Routes.FoundationTypography,
     component: () => import('@/views/foundation/Typography.vue'),
+  },
+  {
+    path: '/components/buttons',
+    name: Routes.ComponentsButtons,
+    component: () => import('@/views/components/Buttons.vue'),
   },
 ];
 
