@@ -1,4 +1,4 @@
-@import "../tokens";
+@import "../tokens/global";
 
 :root {
   --color-static-white: #{map-get($tokens, "color-static-white")};
