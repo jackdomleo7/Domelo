@@ -6,6 +6,7 @@ Vue.use(VueRouter);
 export class Routes {
   public static readonly Home: string = 'home';
   public static readonly FoundationColor: string = 'foundation-color';
+  public static readonly FoundationDesignTokens: string = 'foundation-design-tokens';
   public static readonly FoundationGrid: string = 'foundation-grid';
   public static readonly FoundationObjectStyles: string = 'foundation-object-styles';
   public static readonly FoundationPlatformScale: string = 'foundation-platform-scale';
@@ -23,6 +24,11 @@ const routes = [
     path: '/foundation/color',
     name: Routes.FoundationColor,
     component: () => import('@/views/foundation/Color.vue'),
+  },
+  {
+    path: '/foundation/design-tokens',
+    name: Routes.FoundationDesignTokens,
+    component: () => import('@/views/foundation/DesignTokens.vue'),
   },
   {
     path: '/foundation/grid',
