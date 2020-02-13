@@ -21,6 +21,9 @@
                   <router-link :to="{ name: Routes.FoundationColor }">Color</router-link>
                 </li>
                 <li>
+                  <router-link :to="{ name: Routes.FoundationDesignTokens }">Design tokens</router-link>
+                </li>
+                <li>
                   <router-link :to="{ name: Routes.FoundationTypography }">Typography</router-link>
                 </li>
                 <li>
