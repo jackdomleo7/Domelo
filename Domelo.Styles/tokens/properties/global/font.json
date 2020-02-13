@@ -1,0 +1,24 @@
+{
+  "font": {
+    "size": {
+      "50": { "value": "0.8125rem", "comment": "Mobile font size: 13px" },
+      "75": { "value": "0.9375rem", "comment": "Mobile font size: 15px" },
+      "100": { "value": "1.0625rem", "comment": "Mobile font size: 17px" },
+      "200" : { "value": "1.1875rem", "comment": "Mobile font size: 19px" },
+      "300" : { "value": "1.375rem", "comment": "Mobile font size: 22px" },
+      "400" : { "value": "1.5rem", "comment": "Mobile font size: 24px" },
+      "500" : { "value": "1.6875rem", "comment": "Mobile font size: 27px" },
+      "600" : { "value": "1.9375rem", "comment": "Mobile font size: 31px" },
+      "700" : { "value": "2.125rem", "comment": "Mobile font size: 34px" },
+      "800" : { "value": "2.4375rem", "comment": "Mobile font size: 39px" },
+      "900" : { "value": "2.75rem", "comment": "Mobile font size: 44px" },
+      "1000" : { "value": "3.0625rem", "comment": "Mobile font size: 49px" },
+      "1100" : { "value": "3.4375rem", "comment": "Mobile font size: 55px" }
+    },
+    "weight": {
+      "light": { "value": "300" },
+      "medium": { "value": "400" },
+      "heavy": { "value": "600" }
+    }
+  }
+}

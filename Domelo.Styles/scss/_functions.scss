@@ -1,8 +1,0 @@
-@function pxtorem($px) {
-  $rem: $px / 16px;
-  @return #{$rem}rem;
-}
-@function pxtoem($px) {
-  $em: $px / 16px;
-  @return #{$em}em;
-}

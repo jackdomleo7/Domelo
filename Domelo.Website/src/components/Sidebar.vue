@@ -21,6 +21,9 @@
                   <router-link :to="{ name: Routes.FoundationColor }">Color</router-link>
                 </li>
                 <li>
+                  <router-link :to="{ name: Routes.FoundationDesignTokens }">Design tokens</router-link>
+                </li>
+                <li>
                   <router-link :to="{ name: Routes.FoundationTypography }">Typography</router-link>
                 </li>
                 <li>
@@ -85,7 +88,7 @@ export default class SideNavigation extends Vue {
 
 <style lang="scss" scoped>
 .sidebar {
-  background-color: rgba(var(--alternate-background-high-color), 1);
+  background-color: var(--alternate-background-high-color);
   bottom: 0;
   left: auto;
   position: fixed;
@@ -135,7 +138,7 @@ export default class SideNavigation extends Vue {
   }
 
   &__overlay {
-    background-color: rgba(var(--static-black), 0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     height: 100vh;
     left: 0;
     position: fixed;

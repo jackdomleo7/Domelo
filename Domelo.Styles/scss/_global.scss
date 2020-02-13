@@ -12,8 +12,8 @@
 }
 
 ::selection {
-  background-color: rgba(var(--static-blue-400), 1);
-  color: rgba(var(--static-white), 1);
+  background-color: var(--color-static-blue-400);
+  color: var(--color-static-white);
   text-shadow: none;
 }
 
@@ -34,8 +34,8 @@ html {
 }
 
 body {
-  background-color: rgba(var(--grey-50), 1);
-  color: rgba(var(--text-content-medium-color), 1);
+  background-color: var(--grey-50);
+  color: var(--text-content-medium-color);
   font-family: "Open Sans", Verdana, Arial, sans-serif;
 }
 
@@ -45,7 +45,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: rgba(var(--text-content-high-color), 1);
+  color: var(--text-content-high-color);
   margin: 0;
 }
 

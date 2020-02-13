@@ -1,62 +1,34 @@
 @import "../scale/scale";
-@import "../functions";
-
-$font-size-50: pxtorem(13px);
-$font-size-75: pxtorem(15px);
-$font-size-100: pxtorem(17px);
-$font-size-200: pxtorem(19px);
-$font-size-300: pxtorem(22px);
-$font-size-400: pxtorem(24px);
-$font-size-500: pxtorem(27px);
-$font-size-600: pxtorem(31px);
-$font-size-700: pxtorem(34px);
-$font-size-800: pxtorem(39px);
-$font-size-900: pxtorem(44px);
-$font-size-1000: pxtorem(49px);
-$font-size-1100: pxtorem(55px);
-
-$d-font-size-50: pxtorem(11px);
-$d-font-size-75: pxtorem(12px);
-$d-font-size-100: pxtorem(14px);
-$d-font-size-200: pxtorem(16px);
-$d-font-size-300: pxtorem(18px);
-$d-font-size-400: pxtorem(20px);
-$d-font-size-500: pxtorem(22px);
-$d-font-size-600: pxtorem(25px);
-$d-font-size-700: pxtorem(28px);
-$d-font-size-800: pxtorem(32px);
-$d-font-size-900: pxtorem(36px);
-$d-font-size-1000: pxtorem(40px);
-$d-font-size-1100: pxtorem(45px);
+@import "../tokens/global";
 
 :root {
-  --font-size-50: #{$font-size-50};
-  --font-size-75: #{$font-size-75};
-  --font-size-100: #{$font-size-100};
-  --font-size-200: #{$font-size-200};
-  --font-size-300: #{$font-size-300};
-  --font-size-400: #{$font-size-400};
-  --font-size-500: #{$font-size-500};
-  --font-size-600: #{$font-size-600};
-  --font-size-700: #{$font-size-700};
-  --font-size-800: #{$font-size-800};
-  --font-size-900: #{$font-size-900};
-  --font-size-1000: #{$font-size-1000};
-  --font-size-1100: #{$font-size-1100};
+  --font-size-50: #{map-get($tokens, "font-size-50")};
+  --font-size-75: #{map-get($tokens, "font-size-75")};
+  --font-size-100: #{map-get($tokens, "font-size-100")};
+  --font-size-200: #{map-get($tokens, "font-size-200")};
+  --font-size-300: #{map-get($tokens, "font-size-300")};
+  --font-size-400: #{map-get($tokens, "font-size-400")};
+  --font-size-500: #{map-get($tokens, "font-size-500")};
+  --font-size-600: #{map-get($tokens, "font-size-600")};
+  --font-size-700: #{map-get($tokens, "font-size-700")};
+  --font-size-800: #{map-get($tokens, "font-size-800")};
+  --font-size-900: #{map-get($tokens, "font-size-900")};
+  --font-size-1000: #{map-get($tokens, "font-size-1000")};
+  --font-size-1100: #{map-get($tokens, "font-size-1100")};
 
-  @media screen and (min-width: $desktop-width) {
-    --font-size-50: #{$d-font-size-50};
-    --font-size-75: #{$d-font-size-75};
-    --font-size-100: #{$d-font-size-100};
-    --font-size-200: #{$d-font-size-200};
-    --font-size-300: #{$d-font-size-300};
-    --font-size-400: #{$d-font-size-400};
-    --font-size-500: #{$d-font-size-500};
-    --font-size-600: #{$d-font-size-600};
-    --font-size-700: #{$d-font-size-700};
-    --font-size-800: #{$d-font-size-800};
-    --font-size-900: #{$d-font-size-900};
-    --font-size-1000: #{$d-font-size-1000};
-    --font-size-1100: #{$d-font-size-1100};
+  @media screen and (min-width: map-get($tokens, "scale-desktop-min-width")) {
+    --font-size-50: calc(#{map-get($tokens, "font-size-50")} * var(--scale-mobile-to-desktop-proportion));
+    --font-size-75: calc(#{map-get($tokens, "font-size-75")} * var(--scale-mobile-to-desktop-proportion));
+    --font-size-100: calc(#{map-get($tokens, "font-size-100")} * var(--scale-mobile-to-desktop-proportion));
+    --font-size-200: calc(#{map-get($tokens, "font-size-200")} * var(--scale-mobile-to-desktop-proportion));
+    --font-size-300: calc(#{map-get($tokens, "font-size-300")} * var(--scale-mobile-to-desktop-proportion));
+    --font-size-400: calc(#{map-get($tokens, "font-size-400")} * var(--scale-mobile-to-desktop-proportion));
+    --font-size-500: calc(#{map-get($tokens, "font-size-500")} * var(--scale-mobile-to-desktop-proportion));
+    --font-size-600: calc(#{map-get($tokens, "font-size-600")} * var(--scale-mobile-to-desktop-proportion));
+    --font-size-700: calc(#{map-get($tokens, "font-size-700")} * var(--scale-mobile-to-desktop-proportion));
+    --font-size-800: calc(#{map-get($tokens, "font-size-800")} * var(--scale-mobile-to-desktop-proportion));
+    --font-size-900: calc(#{map-get($tokens, "font-size-900")} * var(--scale-mobile-to-desktop-proportion));
+    --font-size-1000: calc(#{map-get($tokens, "font-size-1000")} * var(--scale-mobile-to-desktop-proportion));
+    --font-size-1100: calc(#{map-get($tokens, "font-size-1100")} * var(--scale-mobile-to-desktop-proportion));
   }
 }

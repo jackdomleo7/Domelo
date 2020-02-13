@@ -34,7 +34,7 @@
   }
 }
 
-@media screen and (min-width: $desktop-width) {
+@media screen and (min-width: map-get($tokens, "scale-desktop-min-width")) {
   .heading {
     &--xl {
       @include heading(var(--font-size-1100));

@@ -1,0 +1,23 @@
+{
+  "source": ["tokens/properties/**/*.json"],
+  "platforms": {
+    "json": {
+      "transformGroup": "js",
+      "buildPath": "tokens/",
+      "files": [{
+        "destination": "global-tokens.json",
+        "format": "json/flat"
+      }]
+    },
+    "scss": {
+      "transformGroup": "scss",
+      "buildPath": "scss/tokens/",
+      "files": [
+        {
+          "format": "scss/map-flat",
+          "destination": "_global.scss"
+        }
+      ]
+    }
+  }
+}
