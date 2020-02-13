@@ -5,17 +5,17 @@
       "transformGroup": "js",
       "buildPath": "tokens/",
       "files": [{
-        "destination": "tokens.json",
+        "destination": "global-tokens.json",
         "format": "json/flat"
       }]
     },
     "scss": {
       "transformGroup": "scss",
-      "buildPath": "scss/",
+      "buildPath": "scss/tokens/",
       "files": [
         {
           "format": "scss/map-flat",
-          "destination": "_tokens.scss"
+          "destination": "_global.scss"
         }
       ]
     }

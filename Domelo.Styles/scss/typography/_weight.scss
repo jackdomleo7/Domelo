@@ -1,4 +1,4 @@
-@import "../tokens";
+@import "../tokens/global";
 
 :root {
   --font-weight-light: #{map-get($tokens, "font-weight-light")};

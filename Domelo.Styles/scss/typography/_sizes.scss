@@ -1,5 +1,5 @@
 @import "../scale/scale";
-@import "../tokens";
+@import "../tokens/global";
 
 :root {
   --font-size-50: #{map-get($tokens, "font-size-50")};
