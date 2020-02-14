@@ -3,11 +3,11 @@
 $button-height: 2.5rem;
 
 :root {
-    --button-height: #{$button-height};
+  --button-height: #{$button-height};
 
-    @media screen and (min-width: map-get($tokens, "scale-desktop-min-width")) {
-        --button-height: calc(#{$button-height} * var(--scale-mobile-to-desktop-proportion));
-    }
+  @media screen and (min-width: map-get($tokens, "scale-desktop-min-width")) {
+    --button-height: calc(#{$button-height} * var(--scale-mobile-to-desktop-proportion));
+  }
 }
 
 .button {
@@ -99,10 +99,10 @@ $button-height: 2.5rem;
     border-color: transparent;
 
     &:not( [disabled] ) {
-        &:hover {
-            background-color: var(--grey-100);
-            border-color: var(--grey-100);
-        }
+      &:hover {
+        background-color: var(--grey-100);
+        border-color: var(--grey-100);
+      }
     }
   }
 
