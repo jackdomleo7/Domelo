@@ -40,6 +40,7 @@ $button-height: 2.5rem;
 
   &__icon {
     height: 100%;
+    pointer-events: none;
 
     ~ .button__label {
       padding-left: 0.25rem;
