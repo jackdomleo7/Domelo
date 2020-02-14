@@ -1,3 +1,15 @@
+@import "../tokens/global";
+
+$button-height: 2.5rem;
+
+:root {
+    --button-height: #{$button-height};
+
+    @media screen and (min-width: map-get($tokens, "scale-desktop-min-width")) {
+        --button-height: calc(#{$button-height} * var(--scale-mobile-to-desktop-proportion));
+    }
+}
+
 .button {
   @include body(var(--font-size-100));
   align-items: center;
@@ -8,7 +20,7 @@
   cursor: pointer;
   display: inline-flex;
   font-weight: var(--font-weight-heavy);
-  height: 32px;
+  height: var(--button-height);
   justify-content: center;
   padding: 0 1rem;
   text-decoration: none;
@@ -30,11 +42,25 @@
     height: 100%;
 
     ~ .button__label {
-      padding-left: 4px;
+      padding-left: 0.25rem;
     }
   }
 
   &--primary {
+    background-color: var(--grey-700);
+    border-color: var(--grey-700);
+    color: var(--color-static-white);
+
+    &:not( [disabled] ) {
+      &:hover {
+        background-color: var(--grey-800);
+        border-color: var(--grey-800);
+        color: var(--color-static-white);
+      }
+    }
+  }
+
+  &--cta {
     background-color: var(--color-static-blue-400);
     border-color: var(--color-static-blue-400);
     color: var(--color-static-white);
@@ -70,9 +96,17 @@
   &--quiet {
     @extend .button--outline;
     border-color: transparent;
+
+    &:not( [disabled] ) {
+        &:hover {
+            background-color: var(--grey-100);
+            border-color: var(--grey-100);
+        }
+    }
   }
 
   &--square {
     padding: 0;
+    width: var(--button-height);
   }
 }

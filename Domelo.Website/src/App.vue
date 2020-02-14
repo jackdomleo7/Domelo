@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="app">
-    <header class="header-bar"><button @click="toggleSidebar">Toggle nav</button></header>
+    <header class="header-bar"><button class="button" @click="toggleSidebar">Toggle nav</button></header>
     <sidebar :sidebar-open="isSidebarOpen" />
     <router-view />
   </div>
