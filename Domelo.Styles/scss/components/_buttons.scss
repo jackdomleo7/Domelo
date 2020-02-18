@@ -25,6 +25,7 @@ $button-height: 2.5rem;
   padding: 0 1rem;
   text-decoration: none;
   transition: var(--transition-timing) background-color ease-in-out, var(--transition-timing) color ease-in-out, var(--transition-timing) border-color ease-in-out;
+  vertical-align: bottom;
 
   &:not( [disabled] ) {
     &:hover {
