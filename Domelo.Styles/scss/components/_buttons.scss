@@ -1,6 +1,6 @@
 @import "../tokens/global";
 
-$button-height: 2.5rem;
+$button-height: 3rem;
 
 :root {
   --button-height: #{$button-height};
@@ -11,7 +11,7 @@ $button-height: 2.5rem;
 }
 
 .button {
-  @include body(var(--font-size-100));
+  @include bodySkeleton(var(--font-size-200));
   align-items: center;
   background-color: var(--grey-200);
   border: 2px solid var(--grey-200);
@@ -22,6 +22,7 @@ $button-height: 2.5rem;
   font-weight: var(--font-weight-heavy);
   height: var(--button-height);
   justify-content: center;
+  min-width: calc(var(--button-height) * 2.25);
   padding: 0 1rem;
   text-decoration: none;
   transition: var(--transition-timing) background-color ease-in-out, var(--transition-timing) color ease-in-out, var(--transition-timing) border-color ease-in-out;
@@ -31,6 +32,11 @@ $button-height: 2.5rem;
     &:hover {
       background-color: var(--grey-300);
       border-color: var(--grey-300);
+    }
+
+    &:active {
+      background-color: var(--grey-400);
+      border-color: var(--grey-400);
     }
   }
 
@@ -48,20 +54,6 @@ $button-height: 2.5rem;
     }
   }
 
-  &--primary {
-    background-color: var(--grey-700);
-    border-color: var(--grey-700);
-    color: var(--text-content-high-color-revere);
-
-    &:not( [disabled] ) {
-      &:hover {
-        background-color: var(--grey-800);
-        border-color: var(--grey-800);
-        color: var(--text-content-high-color-revere);
-      }
-    }
-  }
-
   &--cta {
     background-color: var(--color-static-blue-400);
     border-color: var(--color-static-blue-400);
@@ -72,6 +64,11 @@ $button-height: 2.5rem;
         background-color: var(--blue-500);
         border-color: var(--blue-500);
         color: var(--color-static-white);
+      }
+
+      &:active {
+        background-color: var(--blue-600);
+        border-color: var(--blue-600);
       }
     }
   }
@@ -87,6 +84,11 @@ $button-height: 2.5rem;
         border-color: var(--red-500);
         color: var(--color-static-white);
       }
+
+      &:active {
+        background-color: var(--red-600);
+        border-color: var(--red-600);
+      }
     }
   }
 
@@ -98,16 +100,23 @@ $button-height: 2.5rem;
   &--quiet {
     @extend .button--outline;
     border-color: transparent;
+    min-width: initial;
 
     &:not( [disabled] ) {
       &:hover {
         background-color: var(--grey-100);
         border-color: var(--grey-100);
       }
+
+      &:active {
+        background-color: var(--grey-200);
+        border-color: var(--grey-200);
+      }
     }
   }
 
   &--square {
+    min-width: initial;
     padding: 0;
     width: var(--button-height);
   }
