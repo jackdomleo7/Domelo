@@ -42,7 +42,9 @@ $button-height: 3rem;
 
   &:disabled {
     cursor: default;
-    opacity: 0.2;
+    background-color: var(--grey-75);
+    border-color: var(--grey-75);
+    color: var(--grey-500);
   }
 
   &__icon {
@@ -112,6 +114,11 @@ $button-height: 3rem;
         background-color: var(--grey-200);
         border-color: var(--grey-200);
       }
+    }
+
+    &:disabled {
+      background-color: transparent;
+      border-color: transparent;
     }
   }
 
