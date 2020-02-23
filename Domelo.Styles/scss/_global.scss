@@ -52,3 +52,8 @@ h6 {
 img {
   user-select: none;
 }
+
+:focus {
+  box-shadow: 0 0 0 0.2rem var(--blue-500);
+  outline: none;
+}
