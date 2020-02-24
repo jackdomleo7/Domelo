@@ -8,7 +8,7 @@
           </router-link>
           <p>A design system by <a href="https://jackdomleo.dev" target="_blank">Jack Domleo</a></p>
         </div>
-        <button class="button" @click="toggleTheme">Toggle theme</button>
+        <button class="button button--cta" @click="toggleTheme">Toggle theme</button>
         <nav class="sidebar__navigation">
           <ul role="tree">
             <li>
