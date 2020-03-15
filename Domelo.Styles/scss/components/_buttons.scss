@@ -11,6 +11,7 @@ $button-height: 3rem;
 }
 
 .button {
+  --button-color: var(--grey-200);
   --button-bg-color: transparent;
   --button-bg-color-hover: var(--grey-300);
   --button-bg-color-active: var(--grey-400);
@@ -35,6 +36,16 @@ $button-height: 3rem;
   text-decoration: none;
   transition: var(--transition-timing) background-color ease-in-out, var(--transition-timing) color ease-in-out, var(--transition-timing) border-color ease-in-out;
   vertical-align: bottom;
+
+  &.button--informative {
+    --button-color: var(--color-static-blue-400);
+    --button-text-color: var(--color-static-white);
+  }
+
+  &.button--negative {
+    --button-color: var(--color-static-red-400);
+    --button-text-color: var(--color-static-white);
+  }
 
   &:not( [disabled] ) {
     &:hover {
@@ -81,20 +92,6 @@ $button-height: 3rem;
     --button-text-color-hover: var(--color-static-white);
   }
 
-  &--cta {
-    --button-color: var(--grey-200);
-
-    &.button--informative {
-      --button-color: var(--color-static-blue-400);
-      --button-text-color: var(--color-static-white);
-    }
-
-    &.button--negative {
-      --button-color: var(--color-static-red-400);
-      --button-text-color: var(--color-static-white);
-    }
-  }
-
   &--quiet {
     background-color: transparent;
     border-color: transparent;
@@ -102,7 +99,8 @@ $button-height: 3rem;
     min-width: initial;
 
     &:not( [disabled] ) {
-      &:hover {
+      &:hover,
+      &:focus  {
         background-color: var(--grey-100);
         border-color: var(--grey-100);
       }
@@ -119,7 +117,7 @@ $button-height: 3rem;
     }
   }
 
-  &--square {
+  &--iconOnly {
     min-width: initial;
     padding: 0;
     width: var(--button-height);
