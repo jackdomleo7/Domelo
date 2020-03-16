@@ -7,6 +7,8 @@
         <p class="body--m"></p>
         <button class="button" style="margin-right: 10px;"><span class="button__label">Default</span></button>
 
+        <code-highlighter :code="ButtonDefault" />
+
         <br/>
 
         <h3 class="heading--subheading">Informative</h3>
@@ -94,9 +96,16 @@
 <script lang="ts">
   import {Component, Vue} from 'vue-property-decorator';
   import Page from '@/components/Page.vue';
+  import CodeHighlighter from '@/components/CodeHighlighter.vue';
+
+  export class ButtonMarkup {
+    public readonly ButtonDefault: string = "<button class='button'>\n\t<span";
+  }
 
   @Component({
-    components: { Page },
+    components: { CodeHighlighter, Page },
   })
-  export default class DesignTokens extends Vue {}
+  export default class Buttons extends Vue {
+    private readonly ButtonDefault: string = "<button class='button'>\n\t<span class='button__label'>Default</span>\n</button>";
+  }
 </script>
