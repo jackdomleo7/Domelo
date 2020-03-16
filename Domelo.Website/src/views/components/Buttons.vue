@@ -7,7 +7,7 @@
         <p class="body--m"></p>
         <button class="button" style="margin-right: 10px;"><span class="button__label">Default</span></button>
 
-        <code-highlighter :code="ButtonDefault" />
+        <code-highlighter :code="ButtonDefault.trim()" />
 
         <br/>
 
@@ -106,6 +106,9 @@
     components: { CodeHighlighter, Page },
   })
   export default class Buttons extends Vue {
-    private readonly ButtonDefault: string = "<button class='button'>\n\t<span class='button__label'>Default</span>\n</button>";
+    private readonly ButtonDefault: string =
+    `<button class="button">
+    <span class="button__label">Default</span>
+    </button>`;
   }
 </script>
