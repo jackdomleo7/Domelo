@@ -1,4 +1,6 @@
 <template>
+    <div>
+      <div v-html="code"></div>
     <prism-editor
         v-model="code"
         language="html"
@@ -6,6 +8,7 @@
         readonly
         class="my-editor"
     />
+    </div>
 </template>
 
 <script lang="ts">
