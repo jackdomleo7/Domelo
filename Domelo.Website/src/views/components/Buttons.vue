@@ -7,7 +7,7 @@
         <p class="body--m"></p>
         <button class="button" style="margin-right: 10px;"><span class="button__label">Default</span></button>
 
-        <code-highlighter :code="ButtonDefault.trim()" />
+        <code-highlighter :code="ButtonDefault" />
 
         <br/>
 
@@ -94,21 +94,17 @@
 </template>
 
 <script lang="ts">
-  import {Component, Vue} from 'vue-property-decorator';
-  import Page from '@/components/Page.vue';
-  import CodeHighlighter from '@/components/CodeHighlighter.vue';
+import {Component, Vue} from 'vue-property-decorator';
+import Page from '@/components/Page.vue';
+import CodeHighlighter from '@/components/CodeHighlighter.vue';
 
-  export class ButtonMarkup {
-    public readonly ButtonDefault: string = "<button class='button'>\n\t<span";
-  }
-
-  @Component({
-    components: { CodeHighlighter, Page },
-  })
-  export default class Buttons extends Vue {
-    private readonly ButtonDefault: string =
-    `<button class="button">
-    <span class="button__label">Default</span>
-    </button>`;
-  }
+@Component({
+  components: { CodeHighlighter, Page },
+})
+export default class Buttons extends Vue {
+  private readonly ButtonDefault: string =
+`<button class="button">
+  <span class="button__label">Default</span>
+</button>`;
+}
 </script>
