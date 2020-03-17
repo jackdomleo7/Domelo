@@ -18,6 +18,20 @@ import Sidebar from '@/components/Sidebar.vue';
 export default class App extends Vue {
   private isSidebarOpen: boolean = false;
 
+  private mounted() {
+    this.getDeepLinkPath();
+  }
+
+  private getDeepLinkPath() {
+    // Solution for GitHub pages SPA deep linking
+    // Also see Domelo.Website/public/404.html
+    const path = localStorage.getItem('path');
+    if (path) {
+      localStorage.removeItem('path');
+      this.$router.push(path);
+    }
+  }
+
   private toggleSidebar() {
     this.isSidebarOpen = !this.isSidebarOpen;
   }
