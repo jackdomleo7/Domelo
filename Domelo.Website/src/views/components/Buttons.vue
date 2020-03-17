@@ -7,7 +7,7 @@
         <p class="body--m"></p>
         <button class="button" style="margin-right: 10px;"><span class="button__label">Default</span></button>
 
-        <code-highlighter :code="ButtonDefault" />
+        <code-highlighter :code="ButtonDefault" render-markup />
 
         <br/>
 
