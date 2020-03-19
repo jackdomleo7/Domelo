@@ -5,6 +5,7 @@
   "author": "Jack Domleo",
   "description": "Documentation website for the Domelo design system",
   "scripts": {
+    "update-packages": "npm i",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint && npm run stylelint:fix",
@@ -13,7 +14,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "copy-to-clipboard": "^3.2.1",
+    "copy-to-clipboard": "^3.3.1",
     "core-js": "^3.6.4",
     "prismjs": "^1.19.0",
     "register-service-worker": "^1.6.2",
