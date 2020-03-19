@@ -13,6 +13,15 @@
     "stylelint:fix": "stylelint \"**/*.(scss|vue)\" --fix",
     "test:unit": "vue-cli-service test:unit"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JDomleo/Domelo.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JDomleo/Domelo/issues"
+  },
+  "homepage": "https://domelo.jackdomleo.dev",
   "dependencies": {
     "copy-to-clipboard": "^3.3.1",
     "core-js": "^3.6.4",
