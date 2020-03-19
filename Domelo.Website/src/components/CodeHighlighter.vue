@@ -7,6 +7,7 @@
           line-numbers
           :read-only="readOnly"
           class="code-highlighter__editor"
+          :class="'code-highlighter__editor--' + language"
       />
     </section>
 </template>
@@ -49,8 +50,6 @@ export default class CodeHighlighter extends Vue {
   private readonly renderMarkup!: boolean;
 
   private mounted() {
-    document.documentElement.style.setProperty('--codeHighlighter-language', `"${this.language.toUpperCase()}"`);
-
     if (this.renderMarkup && this.language.toLowerCase() !== 'html') {
       console.error('CodeHighlighter.vue - to render the markup, the language must be \'html\'');
     }
@@ -60,8 +59,6 @@ export default class CodeHighlighter extends Vue {
 
 <style lang="scss" scoped>
 .code-highlighter {
-  --codeHighlighter-language: "";
-
   &__element {
     margin-bottom: 2rem;
   }
@@ -71,11 +68,58 @@ export default class CodeHighlighter extends Vue {
 
     &::before {
       color: var(--color-static-white);
-      content: var(--codeHighlighter-language);
       font-size: var(--font-size-75);
       position: absolute;
       right: 1px;
       top: 1px;
+    }
+
+    &--css {
+      &::before {
+        content: "CSS";
+      }
+    }
+
+    &--html {
+      &::before {
+        content: "HTML";
+      }
+    }
+
+    &--javascript {
+      &::before {
+        content: "JavaScript";
+      }
+    }
+
+    &--json {
+      &::before {
+        content: "JSON";
+      }
+    }
+
+    &--markdown {
+      &::before {
+        content: "Markdown";
+      }
+    }
+
+    &--scss {
+      &::before {
+        content: "SCSS";
+      }
+    }
+
+    &--typescript {
+      &::before {
+        content: "TypeScript";
+      }
+    }
+
+    &--vue {
+      &::before {
+        content: "Vue";
+      }
     }
   }
 }
