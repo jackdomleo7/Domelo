@@ -67,6 +67,8 @@ export default class CodeHighlighter extends Vue {
     position: relative;
 
     ::v-deep .prism-editor__code {
+      caret-color: var(--color-static-white);
+
       &:focus {
         box-shadow: none;
       }

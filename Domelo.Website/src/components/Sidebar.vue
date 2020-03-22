@@ -30,6 +30,9 @@
                   <router-link :to="{ name: Routes.FoundationPlatformScale }">Platform scale</router-link>
                 </li>
                 <li>
+                  <router-link :to="{ name: Routes.FoundationIcons }">Icons</router-link>
+                </li>
+                <li>
                   <router-link :to="{ name: Routes.FoundationObjectStyles }">Object styles</router-link>
                 </li>
                 <li>

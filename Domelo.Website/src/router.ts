@@ -8,6 +8,7 @@ export class Routes {
   public static readonly FoundationColor: string = 'foundation-color';
   public static readonly FoundationDesignTokens: string = 'foundation-design-tokens';
   public static readonly FoundationGrid: string = 'foundation-grid';
+  public static readonly FoundationIcons: string = 'foundation-icons';
   public static readonly FoundationObjectStyles: string = 'foundation-object-styles';
   public static readonly FoundationPlatformScale: string = 'foundation-platform-scale';
   public static readonly FoundationResetStylesheet: string = 'foundation-reset-stylesheet';
@@ -35,6 +36,11 @@ const routes = [
     path: '/foundation/grid',
     name: Routes.FoundationGrid,
     component: () => import('@/views/foundation/Grid.vue'),
+  },
+  {
+    path: '/foundation/icons',
+    name: Routes.FoundationIcons,
+    component: () => import('@/views/foundation/Icons.vue'),
   },
   {
     path: '/foundation/object-styles',
