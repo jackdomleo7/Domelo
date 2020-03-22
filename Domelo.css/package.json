@@ -19,9 +19,21 @@
   },
   "homepage": "https://github.com/JDomleo/Domelo#readme",
   "devDependencies": {
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
     "style-dictionary": "^2.8.3",
     "stylelint": "^13.2.1",
     "stylelint-order": "^4.0.0",
     "stylelint-scss": "^3.15.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{css,scss}": [
+      "npm run stylelint:fix"
+    ]
   }
 }
