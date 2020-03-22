@@ -39,7 +39,7 @@
     }
   },
   "lint-staged": {
-    "*.{css,scss}": [
+    "*.{scss}": [
       "npm run stylelint:fix"
     ]
   }
