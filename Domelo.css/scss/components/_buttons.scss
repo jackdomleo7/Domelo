@@ -61,10 +61,10 @@ $button-height: 3rem;
   }
 
   &:disabled {
-    cursor: default;
     background-color: var(--grey-75);
     border-color: var(--grey-75);
     color: var(--grey-500);
+    cursor: default;
   }
 
   &__icon {
@@ -100,7 +100,7 @@ $button-height: 3rem;
 
     &:not( [disabled] ) {
       &:hover,
-      &:focus  {
+      &:focus {
         background-color: var(--grey-100);
         border-color: var(--grey-100);
       }
