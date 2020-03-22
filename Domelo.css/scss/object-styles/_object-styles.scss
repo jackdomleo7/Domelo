@@ -1,0 +1,34 @@
+@import "../scale/scale";
+
+$default-rounding: 0.3125rem;
+$small-rounding: 0.1875rem;
+
+:root {
+  --default-rounding: #{$default-rounding};
+  --small-rounding: #{$small-rounding};
+  --no-rounding: 0;
+  --full-rounding: 50%;
+
+  @media screen and (min-width: $desktop-width) {
+    --default-rounding: calc(#{$default-rounding} * var(--scale-mobile-to-desktop-proportion));
+    --small-rounding: calc(#{$small-rounding} * var(--scale-mobile-to-desktop-proportion));
+  }
+}
+
+.rounding {
+  &--default {
+    border-radius: var(--default-rounding);
+  }
+
+  &--small {
+    border-radius: var(--small-rounding);
+  }
+
+  &--none {
+    border-radius: var(--no-rounding);
+  }
+
+  &--full {
+    border-radius: var(--full-rounding);
+  }
+}

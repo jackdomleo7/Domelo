@@ -1,0 +1,59 @@
+:root {
+  --text-content-high-color: var(--grey-900);
+  --text-content-medium-color: var(--grey-800);
+  --text-content-low-color: var(--grey-700);
+  --placeholder-text-color: var(--grey-600);
+  --disabled-text-color: var(--grey-500);
+  --text-content-high-color-revere: var(--grey-50);
+  --base-background-color: var(--grey-100);
+  --alternate-background-high-color: var(--grey-75);
+  --alternate-background-low-color: var(--grey-50);
+  --transition-timing: 160ms;
+}
+
+::selection {
+  background-color: var(--color-static-blue-400);
+  color: var(--color-static-white);
+  text-shadow: none;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+
+  @media (prefers-reduced-motion: reduce) {
+    scroll-behavior: auto;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--grey-50);
+  color: var(--text-content-medium-color);
+  font-family: "Open Sans", Verdana, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-content-high-color);
+  margin: 0;
+}
+
+img {
+  user-select: none;
+}
+
+:focus {
+  box-shadow: 0 0 0 0.2rem var(--blue-500);
+  outline: none;
+}

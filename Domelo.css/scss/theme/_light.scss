@@ -1,0 +1,33 @@
+@import "../tokens/global";
+
+:root {
+  --grey-50: #{map-get($tokens, "color-theme-light-grey-50")};
+  --grey-75: #{map-get($tokens, "color-theme-light-grey-75")};
+  --grey-100: #{map-get($tokens, "color-theme-light-grey-100")};
+  --grey-200: #{map-get($tokens, "color-theme-light-grey-200")};
+  --grey-300: #{map-get($tokens, "color-theme-light-grey-300")};
+  --grey-400: #{map-get($tokens, "color-theme-light-grey-400")};
+  --grey-500: #{map-get($tokens, "color-theme-light-grey-500")};
+  --grey-600: #{map-get($tokens, "color-theme-light-grey-600")};
+  --grey-700: #{map-get($tokens, "color-theme-light-grey-700")};
+  --grey-800: #{map-get($tokens, "color-theme-light-grey-800")};
+  --grey-900: #{map-get($tokens, "color-theme-light-grey-900")};
+
+  --blue-500: #{map-get($tokens, "color-theme-light-blue-500")};
+  --blue-600: #{map-get($tokens, "color-theme-light-blue-600")};
+  --blue-700: #{map-get($tokens, "color-theme-light-blue-700")};
+
+  --red-500: #{map-get($tokens, "color-theme-light-red-500")};
+  --red-600: #{map-get($tokens, "color-theme-light-red-600")};
+  --red-700: #{map-get($tokens, "color-theme-light-red-700")};
+
+  --orange-500: #{map-get($tokens, "color-theme-light-orange-500")};
+  --orange-600: #{map-get($tokens, "color-theme-light-orange-600")};
+  --orange-700: #{map-get($tokens, "color-theme-light-orange-700")};
+
+  --green-500: #{map-get($tokens, "color-theme-light-green-500")};
+  --green-600: #{map-get($tokens, "color-theme-light-green-600")};
+  --green-700: #{map-get($tokens, "color-theme-light-green-700")};
+
+  --box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
