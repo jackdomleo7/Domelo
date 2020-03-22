@@ -5,6 +5,7 @@
     <article id="svg">
       <h2 class="heading--l">SVGs</h2>
       <p class="body--m">Domelo works well with any SVG (Scalable Vector Graphic) icon set.</p>
+      <!-- TODO: https://css-tricks.com/a-snippet-to-see-all-svgs-in-a-sprite/ --> 
     </article>
   </page>
 </template>
