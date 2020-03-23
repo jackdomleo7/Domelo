@@ -25,6 +25,7 @@
   "dependencies": {
     "copy-to-clipboard": "^3.3.1",
     "core-js": "^3.6.4",
+    "domelo-css": "file:../Domelo.css",
     "prismjs": "^1.19.0",
     "register-service-worker": "^1.6.2",
     "vue": "^2.6.11",

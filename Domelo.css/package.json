@@ -1,5 +1,5 @@
 {
-  "name": "domelo-styles",
+  "name": "domelo-css",
   "version": "1.0.0",
   "description": "Styles for the Domelo design system",
   "scripts": {
@@ -12,6 +12,8 @@
     "type": "git",
     "url": "git+https://github.com/JDomleo/Domelo.git"
   },
+  "style": "/css/domelo.min.css",
+  "sass": "scss/domelo.scss",
   "author": "Jack Domleo",
   "license": "ISC",
   "bugs": {
@@ -27,6 +29,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8",
+    "node-sass": "^4.13.1",
     "sass": "^1.26.3",
     "style-dictionary": "^2.8.3",
     "stylelint": "^13.2.1",

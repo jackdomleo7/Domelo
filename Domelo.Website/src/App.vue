@@ -39,7 +39,7 @@ export default class App extends Vue {
 </script>
 
 <style lang="scss">
-  @import "../Domelo.Styles/scss/domelo";
+  @import "domelo-css";
 
   $header-bar-breakpoint: 961px;
 
