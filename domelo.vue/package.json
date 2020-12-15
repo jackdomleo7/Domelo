@@ -1,8 +1,16 @@
 {
   "name": "domelo.vue",
-  "version": "0.1.0",
-  "private": true,
-  "main": "src/components.ts",
+  "version": "0.1.0-beta-0",
+  "main": "./src/components/index.ts",
+  "description": "A Vue component library",
+  "author": {
+    "name": "Jack Domleo",
+    "url": "https://jackdomleo.dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackdomleo7/Domelo.git"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
